@@ -1,0 +1,42 @@
+.home {
+  overflow: hidden;
+
+  .hero {
+    position: relative;
+    display: flex;
+    width: $container-width;
+    margin: 0 auto;
+
+    .content {
+      display: flex;
+      align-items: center;
+
+      ul li {
+        margin-bottom: 2rem;
+        list-style: none;
+
+        .icon {
+          margin-right: 2rem;
+
+        }
+      }
+    }
+
+    .sub-title {
+      color: $grey-color-1;
+      font-size: 4rem;
+    }
+
+    .hero-image-container {
+      position: relative;
+      height: 75vh;
+      text-align: right;
+      right: -15rem;
+    }
+
+    .hero-image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

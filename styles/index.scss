@@ -11,6 +11,13 @@
 
 html {
   font-size: 10px;
+  max-width: 150rem;
+  margin: 0 auto;
+  background-color: $primary-color;
+}
+
+body {
+  background-color: $white-color;
 }
 
 a,
