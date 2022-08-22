@@ -9,9 +9,11 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <div>
+        <Header />
+        <main className="container">{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };

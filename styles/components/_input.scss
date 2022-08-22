@@ -5,13 +5,14 @@
   width: 100%;
   padding: 1rem;
   outline: none;
+  border-radius: .5rem;
 
   &::placeholder {
     color: $grey-color-1;
   }
 
   &:focus {
-    border-color: $grey-color-2;
+    border-color: $primary-color;
   }
 
 }
