@@ -1,0 +1,44 @@
+body,
+p {
+  font-family: 'Jost', 'sans-serif';
+  color: $grey-color-1;
+  font-size: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $dark-color;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4,
+h6 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $grey-color-1;
+}

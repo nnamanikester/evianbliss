@@ -1,5 +1,6 @@
-@import './fonts.scss';
-@import './abstract/mixins';
+@import './abstract/variables';
+@import './abstract/typography';
+@import './fonts';
 
 * {
   padding: 0;
@@ -12,20 +13,19 @@ html {
   font-size: 10px;
 }
 
-body {}
-
 a,
 a:hover,
 a:visited,
 a:link {
   text-decoration: none;
   cursor: pointer;
+  text-transform: uppercase;
+  color: $dark-color;
+  transition: .3s ease-in-out;
 }
 
-a,
-a:visited,
-a:link {}
-
-a:hover {}
+a:hover {
+  color: $primary-color;
+}
 
 @import './main.scss';

@@ -1,4 +1,3 @@
-@import './abstract/variables';
 @import './abstract/mixins';
 
 // Includes
@@ -6,6 +5,7 @@
 
 // Components
 @import './components/button';
+@import './components/input';
 @import './components/header';
 @import './components/footer';
 
