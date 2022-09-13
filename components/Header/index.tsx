@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = () => {
               className="header-logo__image"
               src={require("/public/logo.png")}
               width="120rem"
-              height="28rem"
+              height="45rem"
               alt="Evian Bliss Logo"
             />
           </div>
@@ -21,6 +21,9 @@ const Header: React.FC<HeaderProps> = () => {
           <ul className="header-menu">
             <li>
               <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
             </li>
             <li className="dropdown">
               <a href="#">Services [ ]</a>
@@ -44,9 +47,6 @@ const Header: React.FC<HeaderProps> = () => {
                   <a href="#">Braiding</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#">Promo</a>
             </li>
             <li>
               <a href="#">Prices</a>

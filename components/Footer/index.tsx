@@ -1,5 +1,6 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import * as React from "react";
+import config from "../../config";
 
 interface FooterProps {}
 
@@ -13,8 +14,6 @@ const Footer: React.FC<FooterProps> = () => {
               <Image
                 className="footer-logo__image"
                 src={require("/public/logo.png")}
-                width="120rem"
-                height="28rem"
                 alt="Evian Bliss Logo"
               />
               <ul className="footer-menu">
@@ -22,18 +21,15 @@ const Footer: React.FC<FooterProps> = () => {
                   <a href="#">About</a>
                 </li>
                 <li>
-                  <a href="#">Offers</a>
+                  <a href="#">Contacts</a>
                 </li>
                 <li>
-                  <a href="#">Prices</a>
-                </li>
-                <li>
-                  <a href="#">Promo</a>
+                  <a href="#">Services</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="col-3 mb-2">
+          <div className="col-3 mb-2 pr-2">
             <h6 className="mb-2">[ ] Locations:</h6>
             <a href="">
               4 Presidential Road, Nkponkiti Junction, 400102, Enugu.
@@ -55,6 +51,13 @@ const Footer: React.FC<FooterProps> = () => {
               <a href="tel:+2348022164416"> +234 802 216 4416</a>
             </p>
           </div>
+        </div>
+
+        <div className="footer-credit mt-3">
+          <p className="text-center">
+            &copy; {new Date().getFullYear()} {config.APP_NAME} - All Rights
+            Reseved.
+          </p>
         </div>
       </footer>
     </>

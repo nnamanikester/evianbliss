@@ -1,12 +1,26 @@
 .btn {
-  color: $white-color !important;
-  background-color: $primary-color;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3rem;
   min-width: 28rem;
   display: inline-block;
   text-align: center;
   border: none;
   padding: .8rem 0;
+
+  &__primary {
+    background-color: $primary-color;
+    color: $white-color !important;
+  }
+
+  &__secondary {
+    background-color: $white-color;
+    color: $dark-color ip !important;
+    font-weight: 600;
+  }
+
+  &__full-width {
+    min-width: none !important;
+    width: 100%;
+  }
 }

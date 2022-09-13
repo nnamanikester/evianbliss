@@ -353,3 +353,19 @@ PADDINGS
     padding-right: 16rem;
   }
 }
+
+.bold {
+  font-weight: 500;
+}
+
+.text-dark {
+  color: $dark-color;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
