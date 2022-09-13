@@ -1,5 +1,6 @@
 import Image from "next/image";
 import * as React from "react";
+import LineIcon from "react-lineicons";
 
 interface HeaderProps {}
 
@@ -26,7 +27,9 @@ const Header: React.FC<HeaderProps> = () => {
               <a href="#">About</a>
             </li>
             <li className="dropdown">
-              <a href="#">Services [ ]</a>
+              <a href="#">
+                Services <i className="lni lni-chevron-down" />
+              </a>
               <ul className="dropdown__menu">
                 <li>
                   <a href="#">Hair Dressing Bottox</a>
@@ -57,14 +60,13 @@ const Header: React.FC<HeaderProps> = () => {
           </ul>
 
           <div className="header-contact">
-            <span className="">[ ] </span>
-            <a href="tel:+2348022164416"> +234 (802) 216 4416</a>
+            <a href="tel:+2348022164416">
+              <span className="lni lni-phone" /> +234 (802) 216 4416
+            </a>
           </div>
 
           <div className="menu-icon">
-            <span className="line-1"></span>
-            <span className="line-2"></span>
-            <span className="line-3"></span>
+            <span className="lni lni-menu icon-small" />
           </div>
         </div>
       </section>

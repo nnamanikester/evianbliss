@@ -26,6 +26,7 @@
 
   .dropdown {
     position: relative;
+    z-index: 9;
 
     &__menu {
       height: 0;

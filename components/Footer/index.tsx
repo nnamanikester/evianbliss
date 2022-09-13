@@ -11,11 +11,40 @@ const Footer: React.FC<FooterProps> = () => {
         <div className="row">
           <div className="col-5 mb-2">
             <div className="footer-logo__container">
-              <Image
-                className="footer-logo__image"
-                src={require("/public/logo.png")}
-                alt="Evian Bliss Logo"
-              />
+              <div>
+                <Image
+                  className="footer-logo__image"
+                  src={require("/public/logo.png")}
+                  alt="Evian Bliss Logo"
+                />
+                <ul className="footer-socials mt-2">
+                  <li>
+                    <a
+                      className="ml-1"
+                      target="__blank"
+                      href={`https://facebook.com/${config.FACEBOOK}`}
+                    >
+                      <span className="lni lni-facebook-original icon-small" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="__blank"
+                      href={`https://instagram.com/${config.INSTAGRAM}`}
+                    >
+                      <span className="lni lni-instagram-original icon-small" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="__blank"
+                      href={`https://wa.me/${config.WHATSAPP}`}
+                    >
+                      <span className="lni lni-whatsapp icon-small" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <ul className="footer-menu">
                 <li>
                   <a href="#">About</a>
@@ -30,18 +59,25 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
           <div className="col-3 mb-2 pr-2">
-            <h6 className="mb-2">[ ] Locations:</h6>
-            <a href="">
-              4 Presidential Road, Nkponkiti Junction, 400102, Enugu.
+            <h6 className="mb-2">
+              <span className="lni lni-map-marker" /> Locations:
+            </h6>
+            <a target="__blank" href={config.MAP_URL}>
+              4 Presidential Road, Nkponkiti Junction, Independence Layout,
+              400102, Enugu.
             </a>
           </div>
           <div className="col-2 mb-2">
-            <h6 className="mb-2">[ ] Our Hours: </h6>
+            <h6 className="mb-2">
+              <span className="lni lni-alarm-clock" /> Our Hours:{" "}
+            </h6>
             <p>Tue-Fri: 9am - 5pm</p>
             <p>Sat,Mon: 10am - 5pm</p>
           </div>
           <div className="col-2 mb-2">
-            <h6 className="mb-2">[ ] Contact: </h6>
+            <h6 className="mb-2">
+              <span className="lni lni-headphone-alt" /> Contact:
+            </h6>
             <p>
               Email:
               <a href="mailto:evianbliss@gmail.com"> evianbliss@gmail.com</a>

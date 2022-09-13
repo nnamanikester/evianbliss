@@ -1,5 +1,5 @@
 .footer {
-  padding-bottom: 15rem !important;
+  padding-bottom: 2rem;
 
   a,
   p {
@@ -31,6 +31,23 @@
       height: 4rem;
       margin-right: 4rem;
     }
+  }
+
+  .footer-socials {
+    list-style: none;
+
+    >li {
+      display: inline-block;
+
+      >a {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .footer-credit {
+    background-color: $grey-color-3;
+    padding: 2rem 0;
   }
 
 }

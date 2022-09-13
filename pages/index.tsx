@@ -9,27 +9,28 @@ const Home: NextPage = () => {
       <section className="hero">
         <div className="col-5 content">
           <div>
-            <h1>
-              SKIN & BEAUTY <br />
-              CENTER
+            <h1 className="hero__title">
+              {config.SHORT_NAME.toUpperCase()}
+              <br />
+              HAIR SPA
             </h1>
-            <h2 className="sub-title">in Los Angeles</h2>
+            <h2 className="sub-title">in Enugu</h2>
 
             <ul className="my-4">
               <li>
-                <span className="icon">(O)</span>
-                Specialists of the highest category
+                <span className="icon lni lni-certificate" />
+                Hair specialists of the highest category
               </li>
               <li>
-                <span className="icon">(O)</span>
-                Premium Cosmetic brands
+                <span className="icon lni lni-diamond-alt" />
+                Premium Hair brands
               </li>
               <li>
-                <span className="icon">(O)</span>
+                <span className="icon lni lni-crown" />
                 Common quality and service standards
               </li>
               <li>
-                <span className="icon">(O)</span>
+                <span className="icon lni lni-protection" />
                 Customer saftey
               </li>
             </ul>
@@ -104,7 +105,7 @@ const Home: NextPage = () => {
                 <li className="accordion__item">
                   <a href="#">
                     <span>Service Category 1</span>
-                    <span className="icon">[ ]</span>
+                    <span className="icon lni lni-chevron-down" />
                   </a>
 
                   <ul className="accordion__content">
@@ -125,7 +126,7 @@ const Home: NextPage = () => {
                 <li className="accordion__item accordion__item--open">
                   <a href="#">
                     <span>Service Category 2 </span>
-                    <span className="icon">[ ]</span>
+                    <span className="icon lni lni-chevron-up" />
                   </a>
 
                   <ul className="accordion__content">
@@ -146,7 +147,7 @@ const Home: NextPage = () => {
                 <li className="accordion__item">
                   <a href="#">
                     <span>Service Category 3 </span>
-                    <span className="icon">[ ]</span>
+                    <span className="icon lni lni-chevron-down" />
                   </a>
 
                   <ul className="accordion__content">
