@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  display: flex;
+  width: $container-width;
+  margin: 0 auto;
+
+  @include respond(tablet-port) {
+    flex-wrap: wrap;
+
+    ul {
+      margin: 3rem 0;
+    }
+  }
+
+  @include respond(mobile-xl) {
+    ul {
+      margin: 2rem 0;
+    }
+  }
+
+  &__title {
+
+    @include respond(tablet-land) {
+      margin-top: 3rem;
+    }
+
+    @include respond(mobile-xl) {
+      margin-top: 2rem;
+    }
+  }
+
+  .content {
+    ul li {
+      margin-bottom: 2rem;
+      list-style: none;
+
+      @include respond(mobile-xl) {
+        margin-bottom: 1rem;
+      }
+
+      .icon {
+        margin-right: 2rem;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .sub-title {
+    color: $grey-color-1;
+  }
+
+  .hero-image-container {
+    // background: url('../../../public/images/evian-bliss-hair-model-2.jpg') no-repeat right;
+    background-size: cover;
+    position: relative;
+    height: 75vh;
+    right: -15rem;
+
+    @include respond(tablet-port) {
+      left: -8rem;
+      height: 50vh;
+    }
+
+    @include respond(mobile-xl) {
+      height: 40vh !important;
+    }
+
+    >img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include respond(tablet-port) {
+        width: 150%;
+      }
+    }
+  }
+}

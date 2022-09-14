@@ -17,22 +17,98 @@ h6 {
 h1 {
   font-size: 6rem;
   font-weight: 400;
+
+  @include respond(laptop-s) {
+    font-size: 5rem;
+  }
+
+  @include respond(tablet-land) {
+    font-size: 4.5rem;
+  }
+
+  @include respond(tablet-port) {
+    font-size: 4rem;
+  }
+
+  @include respond(mobile-xl) {
+    font-size: 3.5rem;
+  }
+
+  @include respond(mobile-l) {
+    font-size: 3rem;
+  }
+
+  @include respond(mobile-m) {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {
   font-size: 4rem;
   font-weight: 400;
+
+  @include respond(laptop-s) {
+    font-size: 4rem;
+  }
+
+  @include respond(tablet-land) {
+    font-size: 3rem;
+  }
+
+  @include respond(tablet-port) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(mobile-xl) {
+    font-size: 2rem;
+  }
+
+  @include respond(mobile-l) {
+    font-size: 1.8rem;
+  }
 }
 
 h3 {
   font-size: 3rem;
   font-weight: 500;
+
+  @include respond(laptop-s) {
+    font-size: 2.8rem;
+  }
+
+  @include respond(tablet-land) {
+    font-size: 2.4rem;
+  }
+
+  @include respond(tablet-port) {
+    font-size: 2rem;
+  }
+
+  @include respond(mobile-xl) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(mobile-l) {
+    font-size: 1.5rem;
+  }
 }
 
 h4,
 h6 {
   font-size: 2.4rem;
   font-weight: 500;
+
+  @include respond(laptop-s) {
+    font-size: 2rem;
+  }
+
+  @include respond(tablet-land) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(tablet-port) {
+    font-size: 1.5rem;
+  }
 }
 
 h5 {
@@ -40,4 +116,24 @@ h5 {
   font-weight: 400;
   text-transform: uppercase;
   color: $grey-color-1;
+
+  @include respond(laptop-s) {
+    font-size: 2rem;
+  }
+
+  @include respond(tablet-land) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(tablet-port) {
+    font-size: 1.5rem;
+  }
+
+  @include respond(mobile-xl) {
+    font-size: 1.3rem;
+  }
+
+  @include respond(mobile-l) {
+    font-size: 1rem;
+  }
 }
