@@ -1,1 +1,1 @@
-declare module "react-lineicons";
+declare module "react-render-html";

@@ -17,6 +17,8 @@ const Home: NextPage = () => {
           <div className="row">
             <div className="col-5">
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 alt="Evian Bliss Hair Spa Model"
                 src={require("/public/images/evian-bliss-hair-model-2.jpg")}
                 className="whychoose-image"
@@ -73,41 +75,57 @@ const Home: NextPage = () => {
           <h3 className="mb-3">The Products We Use</h3>
           <div className="products-list mb-3">
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/mega-growth.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
             />
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/soma.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
             />
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/mega-growth.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
             />
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/soma.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
             />
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/mega-growth.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
             />
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/soma.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
             />
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/mega-growth.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
             />
             <Image
+              placeholder="blur"
+              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
               src={require("../public/images/products/soma.png")}
               alt="Evian Bliss Products"
               className="products-list__image"
@@ -153,6 +171,8 @@ const Home: NextPage = () => {
             </div>
             <div className="col-4 text-right">
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 alt="Evian Bliss Hair Spa Schedule Appointment"
                 src={require("/public/images/evian-bliss-hair-model-2.jpg")}
                 className="schedule-image"
@@ -173,6 +193,8 @@ const Home: NextPage = () => {
                 </p>
                 <div className="review-header__logo-container">
                   <Image
+                    placeholder="blur"
+                    blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                     alt="Google Logo"
                     src={require("/public/images/socials/google.png")}
                     className="review-header__logo"
@@ -190,6 +212,8 @@ const Home: NextPage = () => {
               <div className="review-footer">
                 <div className="">
                   <Image
+                    placeholder="blur"
+                    blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                     alt="Google Logo"
                     src={require("/public/images/socials/google.png")}
                     className="review-footer__image"
@@ -205,6 +229,8 @@ const Home: NextPage = () => {
                 </p>
                 <div className="review-header__logo-container">
                   <Image
+                    placeholder="blur"
+                    blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                     alt="Google Logo"
                     src={require("/public/images/socials/google.png")}
                     className="review-header__logo"
@@ -222,6 +248,8 @@ const Home: NextPage = () => {
               <div className="review-footer">
                 <div className="">
                   <Image
+                    placeholder="blur"
+                    blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                     alt="Google Logo"
                     src={require("/public/images/socials/google.png")}
                     className="review-footer__image"
@@ -237,6 +265,7 @@ const Home: NextPage = () => {
                 </p>
                 <div className="review-header__logo-container">
                   <Image
+                    placeholder="blur"
                     alt="Google Logo"
                     src={require("/public/images/socials/google.png")}
                     className="review-header__logo"
@@ -254,6 +283,7 @@ const Home: NextPage = () => {
               <div className="review-footer">
                 <div className="">
                   <Image
+                    placeholder="blur"
                     alt="Google Logo"
                     src={require("/public/images/socials/google.png")}
                     className="review-footer__image"
@@ -297,6 +327,7 @@ const Home: NextPage = () => {
           <ul className="gallery">
             <li>
               <Image
+                placeholder="blur"
                 src={require("../public/images/evian-bliss-hair-model-2.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -307,6 +338,7 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
                 src={require("../public/images/joyful-african.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -317,6 +349,7 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
                 src={require("../public/images/joyful-african.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -327,6 +360,8 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 src={require("../public/images/evian-bliss-hair-model-1.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -337,6 +372,8 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 src={require("../public/images/evian-bliss-hair-model-3.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -347,6 +384,7 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
                 src={require("../public/images/evian-bliss-hair-model-2.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -357,6 +395,8 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 src={require("../public/images/jessica-felicio-braids.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -367,6 +407,8 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 src={require("../public/images/joyful-african.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -377,6 +419,8 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 src={require("../public/images/evian-bliss-hair-model-1.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -387,6 +431,8 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 src={require("../public/images/evian-bliss-hair-model-3.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 className=""
@@ -442,6 +488,8 @@ const Home: NextPage = () => {
             </div>
             <div className="col-4 text-right">
               <Image
+                placeholder="blur"
+                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                 alt="Evian Bliss Hair Spa Question and Answer"
                 src={require("/public/images/joyful-african.jpg")}
                 className="question-image"

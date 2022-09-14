@@ -2,9 +2,23 @@
    margin-bottom: 15rem;
 
    .service {
+     @include respond(tablet-port) {
+       padding-left: 0;
+     }
+
+     @include respond(tablet-port) {
+       >.row {
+         flex-direction: column-reverse;
+       }
+     }
+
      &__image-container {
        width: '100%';
        text-align: right;
+
+       @include respond(tablet-port) {
+         text-align: center;
+       }
      }
 
      &__image {

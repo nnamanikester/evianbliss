@@ -13,6 +13,7 @@ const Footer: React.FC<FooterProps> = () => {
             <div className="footer-logo__container">
               <div>
                 <Image
+                  placeholder="blur"
                   className="footer-logo__image"
                   src={require("/public/logo.png")}
                   alt="Evian Bliss Logo"

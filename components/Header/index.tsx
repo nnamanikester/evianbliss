@@ -39,6 +39,7 @@ const Header: React.FC<HeaderProps> = () => {
         <div className="container">
           <div className="header-logo__container">
             <Image
+              placeholder="blur"
               className="header-logo__image"
               src={require("/public/logo.png")}
               width="120rem"
@@ -65,6 +66,7 @@ const Header: React.FC<HeaderProps> = () => {
 
             <div className="header-logo__container">
               <Image
+                placeholder="blur"
                 className="header-logo__image"
                 src={require("/public/logo.png")}
                 width="120rem"
