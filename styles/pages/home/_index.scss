@@ -4,18 +4,9 @@
   @import './hero';
   @import './appointment';
   @import './services';
+  @import './whychoose';
 
 
-
-  .whychoose {
-    margin-bottom: 15rem;
-
-    .whychoose-image {
-      width: 80%;
-      height: 40rem;
-      object-fit: cover;
-    }
-  }
 
   .products {
     margin-bottom: 15rem;

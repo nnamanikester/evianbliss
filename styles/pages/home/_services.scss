@@ -1,6 +1,10 @@
  .services {
    margin-bottom: 15rem;
 
+   @include respond(tablet-port) {
+     margin-bottom: 6rem;
+   }
+
    .service {
      @include respond(tablet-port) {
        padding-left: 0;

@@ -1,0 +1,26 @@
+.whychoose {
+  margin-bottom: 15rem;
+
+  @include respond(tablet-port) {
+    margin-bottom: 6rem;
+
+    .experience {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .whychoose-image {
+    width: 80%;
+    height: 40rem;
+    object-fit: cover;
+
+    @include respond(tablet-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(mobile-xl) {
+      height: 30rem;
+    }
+  }
+}
