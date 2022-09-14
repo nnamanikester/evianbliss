@@ -1,6 +1,7 @@
 @import './abstract/variables';
 @import './abstract/typography';
 @import './fonts';
+@import './abstract/mixins';
 
 * {
   padding: 0;
@@ -29,6 +30,14 @@ a:link {
   text-transform: uppercase;
   color: $dark-color;
   transition: .3s ease-in-out;
+
+  @include respond(laptop-s) {
+    font-size: 1.5rem;
+  }
+
+  @include respond(tablet-land) {
+    font-size: 1.2rem;
+  }
 }
 
 a:hover {

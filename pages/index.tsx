@@ -9,12 +9,8 @@ const Home: NextPage = () => {
       <section className="hero">
         <div className="col-5 content">
           <div>
-            <h1 className="hero__title">
-              {config.SHORT_NAME.toUpperCase()}
-              <br />
-              HAIR SPA
-            </h1>
-            <h2 className="sub-title">in Enugu</h2>
+            <h1 className="hero__title">{config.APP_NAME.toUpperCase()}</h1>
+            <h2 className="sub-title">in Enugu.</h2>
 
             <ul className="my-4">
               <li>
@@ -41,7 +37,9 @@ const Home: NextPage = () => {
 
       <section className="appointment container">
         <div className="py-3 px-4">
-          <h3 className="mb-2">Enhance Your Appearance at Our Beauty Center</h3>
+          <h3 className="mb-2">
+            Any Hair Texture You Have, We Make You Adore It!
+          </h3>
           <form method="POST" action="">
             <div className="row mb-2">
               <div className="col-3 pr-1">
