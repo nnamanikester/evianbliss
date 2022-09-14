@@ -4,7 +4,7 @@
   width: $container-width;
   margin: 0 auto;
 
-  @include respond(tablet-port) {
+  @include respond(tablet-land) {
     flex-wrap: wrap;
 
     ul {
@@ -56,7 +56,7 @@
     height: 75vh;
     right: -15rem;
 
-    @include respond(tablet-port) {
+    @include respond(tablet-land) {
       left: -8rem;
       height: 50vh;
     }
@@ -69,6 +69,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include respond(tablet-land) {
+        width: 200%;
+      }
 
       @include respond(tablet-port) {
         width: 150%;

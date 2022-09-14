@@ -2,18 +2,8 @@
   overflow: hidden;
 
   @import './hero';
+  @import './appointment';
 
-  .appointment {
-    box-shadow: .1rem 1rem 2rem $grey-color-3;
-    text-align: center;
-    position: relative;
-    top: -10rem;
-    background-color: $white-color;
-
-    h3 {
-      font-weight: 400;
-    }
-  }
 
   .services {
     margin-bottom: 15rem;

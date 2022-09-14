@@ -8,6 +8,11 @@
   border: none;
   padding: .8rem 0;
 
+  @include respond(tablet-port) {
+    min-width: 0;
+    width: 100%;
+  }
+
   &__primary {
     background-color: $primary-color;
     color: $white-color !important;
@@ -15,7 +20,7 @@
 
   &__secondary {
     background-color: $white-color;
-    color: $dark-color ip !important;
+    color: $dark-color !important;
     font-weight: 600;
   }
 

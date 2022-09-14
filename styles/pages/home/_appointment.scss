@@ -1,0 +1,45 @@
+.appointment {
+  box-shadow: .1rem 1rem 2rem $grey-color-3;
+  text-align: center;
+  position: relative;
+  top: -10rem;
+  background-color: $white-color;
+
+  .appointment__container {
+    padding: 4rem 8rem;
+
+    @include respond(mobile-xl) {
+      padding: 4rem 6rem;
+    }
+
+    @include respond(mobile-l) {
+      padding: 4rem 4rem;
+    }
+
+    @include respond(mobile-m) {
+      padding: 2rem 2rem;
+    }
+  }
+
+
+  h3 {
+    font-weight: 400;
+  }
+
+  .appointment-input {
+    padding: 0 1rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include respond(tablet-port) {
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/future/image";
 import NextImage from "next/image";
-import { Hero } from "../components/home";
+import { Appointment, Hero } from "../components/home";
 import config from "../config";
 
 const Home: NextPage = () => {
@@ -9,58 +9,7 @@ const Home: NextPage = () => {
     <div className="home">
       <Hero />
 
-      <section className="appointment container">
-        <div className="py-3 px-4">
-          <h3 className="mb-2">
-            Any Hair Texture You Have, We Make You Adore It!
-          </h3>
-          <form method="POST" action="">
-            <div className="row mb-2">
-              <div className="col-3 pr-1">
-                <input
-                  className="input"
-                  name="name"
-                  type="text"
-                  placeholder="Name"
-                />
-              </div>
-              <div className="col-3 px-1">
-                <input
-                  className="input"
-                  name="phone"
-                  type="number"
-                  placeholder="Phone number"
-                />
-              </div>
-              <div className="col-3 px-1">
-                <select
-                  placeholder="Choose service"
-                  className="input"
-                  name="service"
-                >
-                  <option>Hair dressing</option>
-                  <option>Braiding</option>
-                  <option>Parking Gel</option>
-                  <option>Weaving</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div className="col-3 pl-1">
-                <input
-                  className="input"
-                  name="date"
-                  type="date"
-                  placeholder="Date & time"
-                />
-              </div>
-            </div>
-
-            <a href="#" className="btn btn__primary" type="submit">
-              Book an appointment
-            </a>
-          </form>
-        </div>
-      </section>
+      <Appointment />
 
       <section className="services">
         <div className="container">
