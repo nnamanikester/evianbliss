@@ -3,64 +3,9 @@
 
   @import './hero';
   @import './appointment';
+  @import './services';
 
 
-  .services {
-    margin-bottom: 15rem;
-  }
-
-  .accordion {
-
-    li {
-      list-style: none;
-      margin-bottom: .5rem;
-    }
-
-    &__content {
-      display: none;
-    }
-
-    &__item {
-      >a {
-        background-color: $grey-color-3;
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        padding: .5rem
-      }
-
-      &--open {
-        .accordion__content {
-          display: block;
-        }
-      }
-    }
-
-    &__content-item {
-      padding-left: 1rem;
-
-      &--active {
-        border-left: .1rem solid $primary-color;
-
-        >a {
-          color: $primary-color;
-        }
-      }
-    }
-  }
-
-  .service {
-    &__image-container {
-      width: '100%';
-      text-align: right;
-    }
-
-    &__image {
-      width: 25rem;
-      height: 25rem;
-      object-fit: cover;
-    }
-  }
 
   .whychoose {
     margin-bottom: 15rem;

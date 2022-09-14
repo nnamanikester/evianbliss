@@ -60,3 +60,5 @@ export const Appointment: React.FC<AppointmentProps> = () => {
     </>
   );
 };
+
+export default Appointment;

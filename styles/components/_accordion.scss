@@ -1,0 +1,39 @@
+.accordion {
+
+  li {
+    list-style: none;
+    margin-bottom: .5rem;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__item {
+    >a {
+      background-color: $grey-color-3;
+      display: block;
+      display: flex;
+      justify-content: space-between;
+      padding: .5rem
+    }
+
+    &--open {
+      .accordion__content {
+        display: block;
+      }
+    }
+  }
+
+  &__content-item {
+    padding-left: 1rem;
+
+    &--active {
+      border-left: .1rem solid $primary-color;
+
+      >a {
+        color: $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+ .services {
+   margin-bottom: 15rem;
+
+   .service {
+     &__image-container {
+       width: '100%';
+       text-align: right;
+     }
+
+     &__image {
+       width: 25rem;
+       height: 25rem;
+       object-fit: cover;
+     }
+   }
+ }
