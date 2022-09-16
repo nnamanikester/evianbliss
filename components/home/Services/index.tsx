@@ -35,28 +35,32 @@ export const Services: React.FC<ServicesProps> = () => {
             name: "Ghana Braids",
             description:
               "<p class='mb-1'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
           },
           {
             id: "ghana-baids-service-2",
             name: "Ghana Braids 2",
             description:
               "<p class='mb-1'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
           },
           {
             id: "ghana-baids-service-3",
             name: "Ghana Braids 3",
             description:
               "<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1548207800-8c16d068bf17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           },
           {
             id: "ghana-baids-service-4",
             name: "Ghana Braids 4",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1552425883-1fd7e6a11c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           },
         ],
       },
@@ -69,21 +73,24 @@ export const Services: React.FC<ServicesProps> = () => {
             name: "Natural Hair Twist",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
           },
           {
             id: "twist-service-2",
             name: "Natural Hair Twist 2",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
           },
           {
             id: "twist-service-3",
             name: "Natural Hair Twist 3",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1548207800-8c16d068bf17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           },
         ],
       },
@@ -96,35 +103,40 @@ export const Services: React.FC<ServicesProps> = () => {
             name: "Igba Nkwu",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
           },
           {
             id: "bridal-hair-service-1",
             name: "Igba Nkwu 1",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
           },
           {
             id: "bridal-hair-service-2",
             name: "Igba Nkwu 2",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1548207800-8c16d068bf17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           },
           {
             id: "bridal-hair-service-3",
             name: "Igba Nkwu 3",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1552425883-1fd7e6a11c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           },
           {
             id: "bridal-hair-service-4",
             name: "Igba Nkwu 4",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1583724711595-ed09eedf1ff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
           },
         ],
       },
@@ -137,14 +149,16 @@ export const Services: React.FC<ServicesProps> = () => {
             name: "Natural Hair Gelup",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
           },
           {
             id: "gelup-service-2",
             name: "Natural Hair Gelup 2",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
           },
         ],
       },
@@ -157,7 +171,8 @@ export const Services: React.FC<ServicesProps> = () => {
             name: "Home Service",
             description:
               "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image: "https://via.placeholder.com/500",
+            image:
+              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
           },
         ],
       },
@@ -167,21 +182,20 @@ export const Services: React.FC<ServicesProps> = () => {
 
   React.useEffect(() => {
     if (services) {
-      setSelectedCategory(services[0]);
-      setSelectedService(services[0].services[0]);
-      setSelectedServiceImage(services[0].services[0].image);
+      handleSelectedCategory(services[0]);
     }
   }, [services]);
 
   const handleSelectedService = (service: ServiceT) => {
     setSelectedService(service);
+    setSelectedServiceImage(service.image);
   };
 
   const handleSelectedCategory = (category: CategoryT) => {
     setSelectedCategory(
       category.id === selectedCategory?.id ? undefined : category
     );
-    setSelectedService(category.services[0]);
+    handleSelectedService(category.services[0]);
   };
 
   return (
@@ -258,6 +272,7 @@ export const Services: React.FC<ServicesProps> = () => {
                 <div className="col-4 service__image-container">
                   {selectedServiceImage && (
                     <Image
+                      key={selectedService?.id}
                       placeholder="blur"
                       blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
                       alt="Evian Bliss Hair Spa Model"

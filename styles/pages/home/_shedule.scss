@@ -1,0 +1,15 @@
+.schedule {
+  margin-bottom: 15rem;
+
+  .schedule-container {
+    background-color: $grey-color-3;
+    text-align: center;
+    padding: 10rem;
+  }
+
+  .schedule-image {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+  }
+}

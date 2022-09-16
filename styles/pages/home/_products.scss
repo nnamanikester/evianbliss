@@ -1,0 +1,35 @@
+.products {
+  margin-bottom: 15rem;
+
+  @include respond(tablet-port) {
+    margin-bottom: 7rem;
+  }
+
+  h3 {
+    @include respond(mobile-xl) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .products-list {
+
+    &__image {
+      width: 15rem;
+      height: 5rem;
+      margin-right: 3rem;
+
+      @include respond(tablet-port) {
+        width: 10rem;
+        height: 4rem;
+        margin-right: 2rem;
+      }
+
+      @include respond(mobile-xl) {
+        width: 8rem;
+        height: 3rem;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+}

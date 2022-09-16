@@ -1,0 +1,49 @@
+.bottom-navigator {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include respond(tablet-port) {
+    margin-top: 4rem;
+    flex-wrap: nowrap;
+  }
+
+  .underline {
+    width: 100%;
+    height: .2rem;
+    background-color: $grey-color-3;
+    margin-top: 1rem;
+
+    &__progress {
+      background-color: $grey-color-2;
+      height: .2rem;
+      border-radius: 1rem;
+      transition: all .3s .1s ease-in-out;
+
+      @for $i from 0 through 100 {
+        &-#{$i} {
+          width: 1% * $i;
+        }
+      }
+    }
+  }
+
+  .arrows {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 4rem;
+    margin-bottom: -1.5rem;
+
+    &__left {
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+
+    &__right {
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+  }
+}

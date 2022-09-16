@@ -6,6 +6,7 @@ const config = {
   WHATSAPP: "+2348022164416",
   INSTAGRAM: "evianbliss",
   MAP_URL: "https://goo.gl/maps/SeqgXaJAHUZag5da7",
+  REVIEW_URL: "https://g.page/r/CRywCxBCbetoEAI/review",
 };
 
 export default config;

@@ -1,6 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/future/image";
-import { Appointment, Hero, Services, WhyChoose } from "../components/home";
+import {
+  Appointment,
+  Hero,
+  Products,
+  Services,
+  WhyChoose,
+} from "../components/home";
 import config from "../config";
 
 const Home: NextPage = () => {
@@ -14,84 +20,7 @@ const Home: NextPage = () => {
 
       <WhyChoose />
 
-      <section className="products">
-        <div className="container">
-          <h3 className="mb-3">The Products We Use</h3>
-          <div className="products-list mb-3">
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/mega-growth.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/soma.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/mega-growth.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/soma.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/mega-growth.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/soma.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/mega-growth.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-            <Image
-              placeholder="blur"
-              blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
-              src={require("../public/images/products/soma.png")}
-              alt="Evian Bliss Products"
-              className="products-list__image"
-            />
-          </div>
-
-          <div className="row mt-4">
-            <div className="col-10">
-              <p className="">
-                We use high quality products for our hair treatments
-              </p>
-              <div className="underline">
-                <div className="underline__progress" />
-              </div>
-            </div>
-            <div className="col-2 arrows">
-              <span className="arrows__left">{"<--------------"}</span>
-              <span className="arrows__right">{"-------------->"}</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Products />
 
       <section className="schedule">
         <div className="container">
@@ -252,7 +181,11 @@ const Home: NextPage = () => {
           </div>
 
           <div className="text-center mt-3">
-            <a href="#" className="btn btn__primary">
+            <a
+              target="__blank"
+              href={config.REVIEW_URL}
+              className="btn btn__primary"
+            >
               + Add a review
             </a>
           </div>
