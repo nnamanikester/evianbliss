@@ -29,6 +29,11 @@
        width: 25rem;
        height: 25rem;
        object-fit: cover;
+
+       @include respond(tablet-port) {
+         width: 95%;
+         margin: 1rem 0;
+       }
      }
    }
  }

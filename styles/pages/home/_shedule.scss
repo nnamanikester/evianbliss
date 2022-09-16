@@ -1,15 +1,67 @@
 .schedule {
   margin-bottom: 15rem;
 
+  @include respond(tablet-port) {
+    margin-bottom: 7rem
+  }
+
+  .schedule-row {
+    @include respond(tablet-land) {
+      flex-direction: column-reverse;
+    }
+  }
+
   .schedule-container {
     background-color: $grey-color-3;
     text-align: center;
-    padding: 10rem;
+    padding: 10rem 20rem;
+    height: 52rem;
+
+    @include respond(laptop-l) {
+      padding: 10rem;
+    }
+
+    @include respond(laptop-s) {
+      padding: 8rem;
+    }
+
+    @include respond(tablet-land) {
+      padding: 10rem;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @include respond(mobile-xl) {
+      padding: 5rem;
+      height: auto;
+    }
+
+    @include respond(mobile-l) {
+      padding: 4rem;
+    }
+  }
+
+  .schedule-image-container {
+
+    @include respond(tablet-land) {
+      text-align: center;
+      width: 100%;
+      margin-bottom: -30%;
+      z-index: 0;
+    }
   }
 
   .schedule-image {
     width: 90%;
-    height: auto;
+    height: 52rem;
     object-fit: cover;
+
+    @include respond(tablet-land) {
+      width: 100%;
+    }
+
+    @include respond(tablet-port) {
+      height: auto;
+    }
   }
 }
