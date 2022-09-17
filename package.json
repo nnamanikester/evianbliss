@@ -17,6 +17,7 @@
     "react-lineicons": "^3.0.0",
     "react-render-html": "^0.6.0",
     "sass": "^1.54.5",
+    "swiper": "^8.4.2",
     "typestyle": "^2.4.0"
   },
   "devDependencies": {

@@ -58,6 +58,10 @@ const Carousel: React.FC<CarouselProps> = ({
   };
 
   React.useEffect(() => {
+    setCurrentScrollLeft(cc);
+  }, []);
+
+  React.useEffect(() => {
     if (currentScrollLeft === 0) {
       wrapperRef.current?.scrollTo({ left: 0 });
       setCurrentScrollLeft(cc);
@@ -74,7 +78,6 @@ const Carousel: React.FC<CarouselProps> = ({
         behavior: "smooth",
       });
     }
-    console.log(currentScrollLeft);
   }, [currentScrollLeft, itemWidth]);
 
   React.useEffect(() => {
@@ -95,7 +98,7 @@ const Carousel: React.FC<CarouselProps> = ({
     };
   }, [itemWidth, interval, autoScroll]);
 
-  console.log(Math.floor((currentScrollLeft / cc) * 100), "Percentage");
+  // console.log(Math.floor((currentScrollLeft / cc) * 100), "Percentage");
 
   return (
     <>

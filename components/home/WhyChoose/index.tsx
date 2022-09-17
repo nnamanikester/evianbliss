@@ -13,7 +13,7 @@ export const WhyChoose: React.FC<WhyChooseProps> = () => {
             <div className="col-5">
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 alt="Evian Bliss Hair Spa Model"
                 src={require("/public/images/evian-bliss-hair-model-2.jpg")}
                 className="whychoose-image"

@@ -2,6 +2,7 @@ import Image from "next/future/image";
 import * as React from "react";
 import cx from "classnames";
 import renderHTML from "react-render-html";
+import config from "../../../config";
 
 interface ServicesProps {}
 
@@ -274,7 +275,7 @@ export const Services: React.FC<ServicesProps> = () => {
                     <Image
                       key={selectedService?.id}
                       placeholder="blur"
-                      blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                      blurDataURL={config.BLUR_URL}
                       alt="Evian Bliss Hair Spa Model"
                       src={selectedServiceImage}
                       width={500}

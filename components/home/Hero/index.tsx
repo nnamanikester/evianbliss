@@ -34,7 +34,7 @@ export const Hero: React.FC<HeroProps> = () => {
         <div className="col-8 hero-image-container">
           <Image
             placeholder="blur"
-            blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+            blurDataURL={config.BLUR_URL}
             src={require("../../../public/images/evian-bliss-hair-model-2.jpg")}
             alt="Evian Bliss Hair Model Hero Image"
           />

@@ -4,3 +4,4 @@ export * from "./Services";
 export * from "./WhyChoose";
 export * from "./Products";
 export * from "./Schedule";
+export * from "./Reviews";

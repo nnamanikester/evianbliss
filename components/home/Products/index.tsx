@@ -1,5 +1,6 @@
 import Image from "next/future/image";
 import * as React from "react";
+import config from "../../../config";
 import Carousel from "../../Carousel";
 import SliderNavigation from "../../SliderNavigation";
 
@@ -21,7 +22,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/mega-growth.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -30,7 +31,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/soma.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -39,7 +40,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/mega-growth.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -48,7 +49,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/soma.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -57,7 +58,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/mega-growth.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -66,7 +67,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/soma.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -75,7 +76,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/mega-growth.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -84,7 +85,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/soma.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -93,7 +94,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/mega-growth.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -102,7 +103,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/soma.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -111,7 +112,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/mega-growth.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -120,7 +121,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/soma.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -129,7 +130,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/mega-growth.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"
@@ -138,7 +139,7 @@ export const Products: React.FC<ProductsProps> = () => {
             <div ref={productRef}>
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 src={require("/public/images/products/soma.png")}
                 alt="Evian Bliss Products"
                 className="products-list__image"

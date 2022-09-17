@@ -30,7 +30,7 @@ export const Schedule: React.FC<ScheduleProps> = () => {
             <div className="col-4 text-right schedule-image-container">
               <Image
                 placeholder="blur"
-                blurDataURL="LEI|nO2k3Z^7-@#XS_KJ?]];5PEL"
+                blurDataURL={config.BLUR_URL}
                 alt="Evian Bliss Hair Spa Schedule Appointment"
                 src={require("/public/images/joyful-african.jpg")}
                 className="schedule-image"

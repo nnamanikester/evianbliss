@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <>
-      <section className="header">
+      <header className="header">
         <div className="container">
           <div className="header-logo__container">
             <Image
@@ -76,265 +76,268 @@ const Header: React.FC<HeaderProps> = () => {
             </div>
           </div>
 
-          <ul className="header-menu" ref={menuRef}>
-            <li>
-              <Link href="/">
+          <nav>
+            <ul className="header-menu" ref={menuRef}>
+              <li>
+                <Link href="/">
+                  <a
+                    className={cx({
+                      "active-menu": pathname == "/",
+                    })}
+                  >
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <a
+                    className={cx({
+                      "active-menu": pathname == "/about",
+                    })}
+                  >
+                    About
+                  </a>
+                </Link>
+              </li>
+              <li className="dropdown">
                 <a
+                  href="#"
                   className={cx({
-                    "active-menu": pathname == "/",
+                    "active-menu":
+                      showSerices || pathname.includes("/services"),
+                  })}
+                  onClick={handleServicesDropdown}
+                >
+                  Services{" "}
+                  <i
+                    className={cx({
+                      lni: true,
+                      "lni-chevron-down": !showSerices,
+                      "lni-chevron-up": showSerices,
+                    })}
+                  />
+                </a>
+                <div
+                  className={cx({
+                    dropdown__menu: true,
+                    "show-dropdown": showSerices,
                   })}
                 >
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a
-                  className={cx({
-                    "active-menu": pathname == "/about",
-                  })}
-                >
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className="dropdown">
-              <a
-                href="#"
-                className={cx({
-                  "active-menu": showSerices || pathname.includes("/services"),
-                })}
-                onClick={handleServicesDropdown}
-              >
-                Services{" "}
-                <i
-                  className={cx({
-                    lni: true,
-                    "lni-chevron-down": !showSerices,
-                    "lni-chevron-up": showSerices,
-                  })}
-                />
-              </a>
-              <div
-                className={cx({
-                  dropdown__menu: true,
-                  "show-dropdown": showSerices,
-                })}
-              >
-                <div className={"dropdown-container"}>
-                  <div className="category-list">
-                    <h5>Braids</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="category-list">
-                    <h5>Bridal Hair Service</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="category-list">
-                    <h5>Cornrow</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="category-list">
-                    <h5>Twists & Bantu</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="category-list">
-                    <h5>Braids</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="category-list">
-                    <h5>Bridal Hair Service</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="category-list">
-                    <h5>Cornrow</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="category-list">
-                    <h5>Twists & Bantu</h5>
-                    <ul>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          Hair Dressing Bottox Hair Dressing Bottox
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                      <li>
-                        <a href="#">Hair Dressing Bottox</a>
-                      </li>
-                      <li>
-                        <a href="#">Braiding</a>
-                      </li>
-                    </ul>
+                  <div className={"dropdown-container"}>
+                    <div className="category-list">
+                      <h5>Braids</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="category-list">
+                      <h5>Bridal Hair Service</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="category-list">
+                      <h5>Cornrow</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="category-list">
+                      <h5>Twists & Bantu</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="category-list">
+                      <h5>Braids</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="category-list">
+                      <h5>Bridal Hair Service</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="category-list">
+                      <h5>Cornrow</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="category-list">
+                      <h5>Twists & Bantu</h5>
+                      <ul>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Hair Dressing Bottox Hair Dressing Bottox
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                        <li>
+                          <a href="#">Hair Dressing Bottox</a>
+                        </li>
+                        <li>
+                          <a href="#">Braiding</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <Link href="/prices">
-                <a
-                  className={cx({
-                    "active-menu": pathname == "/prices",
-                  })}
-                >
-                  Prices
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact-us">
-                <a
-                  className={cx({
-                    "active-menu": pathname == "/contact-us",
-                  })}
-                >
-                  Contact Us
-                </a>
-              </Link>
-            </li>
-          </ul>
+              </li>
+              <li>
+                <Link href="/prices">
+                  <a
+                    className={cx({
+                      "active-menu": pathname == "/prices",
+                    })}
+                  >
+                    Prices
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact-us">
+                  <a
+                    className={cx({
+                      "active-menu": pathname == "/contact-us",
+                    })}
+                  >
+                    Contact Us
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
           <div className="header-contact" ref={contactRef}>
             <a href="tel:+2348022164416">
@@ -349,7 +352,7 @@ const Header: React.FC<HeaderProps> = () => {
             />
           </div>
         </div>
-      </section>
+      </header>
     </>
   );
 };
