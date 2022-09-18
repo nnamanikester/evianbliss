@@ -107,6 +107,7 @@ const Carousel: React.FC<CarouselProps> = ({
         {children}
       </div>
       <SliderNavigation
+        type="carousel"
         text={text}
         progress={Math.floor((currentScrollLeft / cc) * 100)}
         onLeftClick={onScrollRight}

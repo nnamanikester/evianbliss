@@ -29,13 +29,31 @@
     }
   }
 
+  .description {
+    font-size: 2rem;
+    margin-top: 2rem;
+
+    @include respond(mobile-xl) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(mobile-l) {
+      font-size: 1.3rem;
+    }
+  }
+
   .content {
+
     ul li {
       margin-bottom: 2rem;
       list-style: none;
 
       @include respond(mobile-xl) {
         margin-bottom: 1rem;
+      }
+
+      @include respond(mobile-m) {
+        font-size: 1.3rem;
       }
 
       .icon {

@@ -12,6 +12,10 @@ export const Hero: React.FC<HeroProps> = () => {
           <h1 className="hero__title">{config.APP_NAME.toUpperCase()}</h1>
           <h2 className="sub-title">in Enugu.</h2>
 
+          <p className="description">
+            Any Hair Texture You Have, We Make You Adore It!
+          </p>
+
           <ul className="my-4">
             <li>
               <span className="icon lni lni-certificate" />
