@@ -1,6 +1,10 @@
 .photo-gallery {
   margin-bottom: 15rem;
 
+  @include respond(tablet-port) {
+    margin-bottom: 7rem;
+  }
+
   .gallery {
     // display: flex;
     flex-wrap: wrap;

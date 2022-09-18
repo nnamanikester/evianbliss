@@ -1,6 +1,10 @@
 .reviews {
   margin-bottom: 15rem;
 
+  @include respond(tablet-port) {
+    margin-bottom: 7rem;
+  }
+
   .review-container {
     background-color: $light-primary-color;
     padding: 3rem;

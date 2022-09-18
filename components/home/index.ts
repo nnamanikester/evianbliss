@@ -5,3 +5,5 @@ export * from "./WhyChoose";
 export * from "./Products";
 export * from "./Schedule";
 export * from "./Reviews";
+export * from "./PhotoGallery";
+export * from "./Questions";
