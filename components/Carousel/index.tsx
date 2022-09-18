@@ -45,9 +45,9 @@ const Carousel: React.FC<CarouselProps> = ({
 }) => {
   const [itemWidth] = useWidth(itemRef);
   const [, setScrollInterval] = React.useState<NodeJS.Timeout>();
-  const [currentScrollLeft, setCurrentScrollLeft] = React.useState<number>(0);
   const wrapperRef = React.useRef<HTMLDivElement>(null);
   const cc = React.Children.count(children);
+  const [currentScrollLeft, setCurrentScrollLeft] = React.useState<number>(1);
 
   const onScrollLeft = () => {
     setCurrentScrollLeft((csl) => csl + 1);
@@ -56,10 +56,6 @@ const Carousel: React.FC<CarouselProps> = ({
   const onScrollRight = () => {
     setCurrentScrollLeft((csl) => csl - 1);
   };
-
-  React.useEffect(() => {
-    setCurrentScrollLeft(cc);
-  }, []);
 
   React.useEffect(() => {
     if (currentScrollLeft === 0) {

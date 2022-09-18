@@ -9,6 +9,7 @@ import {
   Services,
   WhyChoose,
 } from "../components/home";
+import PhotoGallery from "../components/home/PhotoGallery";
 import MetaTags from "../components/MetaTags";
 import config from "../config";
 
@@ -32,150 +33,7 @@ const HomePage: NextPage = () => {
 
         <Reviews />
 
-        <section className="photo-gallery">
-          <div className="container">
-            <h3 className="">Our Photo Gallery</h3>
-            <p className="mb-3">
-              {
-                "Here you can look at the interior of our spa and the atmosphere that we have given you."
-              }
-            </p>
-
-            <ul className="gallery">
-              <li>
-                <Image
-                  placeholder="blur"
-                  src={require("../public/images/evian-bliss-hair-model-2.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  src={require("../public/images/joyful-african.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  src={require("../public/images/joyful-african.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={config.BLUR_URL}
-                  src={require("../public/images/evian-bliss-hair-model-1.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={config.BLUR_URL}
-                  src={require("../public/images/evian-bliss-hair-model-3.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                  style={{ width: "auto", height: "auto" }}
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  src={require("../public/images/evian-bliss-hair-model-2.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={config.BLUR_URL}
-                  src={require("../public/images/jessica-felicio-braids.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                  style={{ width: "auto", height: "auto" }}
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={config.BLUR_URL}
-                  src={require("../public/images/joyful-african.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={config.BLUR_URL}
-                  src={require("../public/images/evian-bliss-hair-model-1.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-              <li>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={config.BLUR_URL}
-                  src={require("../public/images/evian-bliss-hair-model-3.jpg")}
-                  alt="Evian Bliss Hair Spa Image Gallery"
-                  className=""
-                />
-                <div className="overlay">
-                  <h5>Evian Bliss Hair Style</h5>
-                </div>
-              </li>
-            </ul>
-
-            <div className="row mt-3">
-              <div className="col-10">
-                <p className="">Happy Viewing!</p>
-                <div className="underline">
-                  <div className="underline__progress" />
-                </div>
-              </div>
-              <div className="col-2 arrows">
-                <span className="arrows__left">{"<--------------"}</span>
-                <span className="arrows__right">{"-------------->"}</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PhotoGallery />
 
         <section className="question">
           <div className="container">
