@@ -18,4 +18,8 @@
       margin: 0 1.5rem;
     }
   }
+
+  >li.breadcrum-current>a {
+    cursor: text;
+  }
 }
