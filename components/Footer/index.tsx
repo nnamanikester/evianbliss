@@ -8,7 +8,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <>
       <footer className="footer container">
-        <div className="row">
+        <div className="row footer-row">
           <div className="col-5 mb-2">
             <div className="footer-logo__container">
               <div>
