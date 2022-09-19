@@ -1,0 +1,147 @@
+.react-calendar {
+  max-width: 100%;
+  background: $white-color;
+  border: .1rem solid $primary-color;
+
+  &--doubleView {
+    width: 700px;
+  }
+
+  &--doubleView &__viewContainer {
+    display: flex;
+    margin: -0.5em;
+  }
+
+  &--doubleView &__viewContainer>* {
+    width: 50%;
+    margin: 0.5em;
+  }
+
+  button {
+    margin: 0;
+    border: 0;
+    outline: none;
+
+    &:enabled:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    height: 4.4rem;
+    margin-bottom: 1em;
+
+    button {
+      min-width: 44px;
+      background: none;
+
+      &:disabled {
+        background-color: #f0f0f0;
+      }
+
+      &:enabled:hover,
+      &:enabled:focus {
+        background-color: #e6e6e6;
+      }
+    }
+
+    .react-calendar {
+      &__month-view {
+        &__weekdays {
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+
+  &__month-view {
+    &__weekdays {
+      &__weekday {
+        padding: 0.5em;
+      }
+    }
+
+    &__weekNumbers .react-calendar__tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+      font-weight: bold;
+    }
+
+    .react-calendar {
+      &__month-view {
+        &__days {
+          &__day {
+            &--weekend {
+              color: $primary-color;
+            }
+
+            &--neighboringMonth {
+              color: $grey-color-2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__year-view &__tile,
+  &__decade-view &__tile,
+  &__century-view &__tile {
+    padding: 2em 0.5em;
+  }
+
+  &__tile {
+    max-width: 100%;
+    padding: 10px 6.6667px;
+    background: none;
+    text-align: center;
+    line-height: 16px;
+
+    &:disabled {
+      background-color: #f0f0f0;
+    }
+
+    &:enabled:hover,
+    &:enabled:focus {
+      background-color: #e6e6e6;
+    }
+
+    &--now {
+      background: $light-primary-color;
+
+      &:enabled:hover,
+      &:enabled:focus {
+        background: $grey-color-3;
+      }
+
+      .react-calendar__tile--hasActive {
+        background: #76baff;
+
+        &:enabled:hover,
+        &:enabled:focus {
+          background: #a9d4ff;
+        }
+      }
+    }
+
+    &--active {
+      background: $primary-color;
+      color: $white-color;
+
+      &:enabled:hover,
+      &:enabled:focus {
+        background: $primary-color;
+      }
+    }
+  }
+
+  &--selectRange &__tile--hover {
+    background-color: #e6e6e6;
+  }
+}

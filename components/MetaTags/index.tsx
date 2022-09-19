@@ -19,7 +19,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({
     title ?? "Evian Bliss"
   }  - Natural Hair Spa In Enugu.`;
   const defaultDescription =
-    "Evian Bliss natural hair spa in enugu. Best natural hair salon for hair treatments and protective styling, grooming and consultations. Any hair texture you have, we make you adore it.";
+    "Best natural hair spa in enugu for hair treatments and protective styling, grooming and consultations. Any hair texture you have, we make you adore it.";
   const defaulltUrl = "https://evianbliss.com/";
   const defaultImage = "/public/images/logo.png";
 
@@ -60,7 +60,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({
         name="keywords"
         content={
           keywords +
-          " evian, bliss, evian bliss, hair spa, evian bliss hair spa, beauty salon, unisex salon, hair salon, best hair spa in nigeria, hairsresser, hair stylist, hair grooming, hair treatment and protective styling, hair consultations, natural hair, barbing, hair barbing in enugu"
+          "natural hair spa in enugu, natural hair spa, the natural hair spa, the natural hair spa in enugu, evian, bliss, evian bliss, hair spa, evian bliss hair spa, beauty salon, unisex salon, hair salon, best hair spa in nigeria, hairsresser, hair stylist, hair grooming, hair treatment and protective styling, hair consultations, natural hair, barbing, hair barbing in enugu"
         }
       />
       <link rel="icon" href="/favicon.ico" />

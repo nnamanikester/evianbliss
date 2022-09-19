@@ -8,12 +8,18 @@
 @import './components/footer';
 @import './components/accordion';
 @import './components/slider-navigation';
+@import './components/breadcrum';
+@import './components/calendar';
+@import './components/appointment-calendar';
+@import './components/offer';
 
 // Layouts
 @import './layouts/grid';
 
 // Pages
 @import './pages/home/index';
+@import './pages/appointment';
+@import './pages/prices';
 
 // Abstract
 @import './abstract/utilities';

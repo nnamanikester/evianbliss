@@ -1,0 +1,32 @@
+.book-appointment {
+  margin-bottom: 15rem;
+
+  .request {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form {
+      background-color: $grey-color-3;
+      padding: 4rem;
+
+      .radio-group {
+        padding: 1rem;
+
+        .radio-box {
+          display: inline-block;
+          margin-right: 2rem;
+
+        }
+      }
+
+      .row {
+        justify-content: space-between;
+
+        .input-group {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

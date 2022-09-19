@@ -1,0 +1,50 @@
+.appointment-calendar {
+
+  &__container {
+    padding-right: 2rem;
+
+    @include respond(tablet-port) {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+
+  .slot-container {
+
+    .row {
+      gap: 1rem;
+    }
+
+    .slot {
+      width: 9rem;
+      text-align: center;
+      padding: .5rem 1rem;
+      cursor: pointer;
+
+      @include respond(tablet-port) {
+        width: 48%;
+      }
+
+
+      &--available {
+        background-color: $white-color;
+
+        &:hover {
+          background-color: $light-primary-color;
+        }
+      }
+
+      &--disabled {
+        background-color: $grey-color-2;
+        color: $grey-color-1;
+        cursor: not-allowed;
+      }
+
+      &--selected {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+  }
+}

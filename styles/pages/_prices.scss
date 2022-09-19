@@ -1,0 +1,86 @@
+.prices {
+  margin-bottom: 15rem;
+
+  @include respond(tablet-port) {
+    margin-bottom: 7rem;
+  }
+
+  .prices-row {
+    justify-content: space-between;
+
+    >.col-8 {
+      margin-bottom: 2rem;
+
+      @include respond(tablet-land) {
+        width: 100%;
+      }
+    }
+
+    >.col-3 {
+      @include respond(laptop-s) {
+        width: 30%;
+      }
+
+      @include respond(tablet-land) {
+        width: 100%;
+      }
+    }
+
+    .accordion {
+
+      &__content {
+        li {
+          margin-bottom: 2rem;
+          padding-bottom: 1rem;
+          border-bottom: .1rem solid $grey-color-3;
+          justify-content: space-between;
+          position: relative;
+
+          >p {
+            color: $dark-color;
+
+            @include respond(mobile-xl) {
+              width: 30%;
+            }
+
+            @include respond(mobile-l) {
+              width: 100%;
+            }
+          }
+
+          @include respond(mobile-l) {
+            >.duration {
+              font-size: 1.3rem;
+              color: $grey-color-1;
+            }
+
+            >.price {
+              position: absolute;
+              top: 0;
+              right: 1.5rem;
+              font-size: 1.3rem;
+            }
+          }
+
+          @include respond(mobile-s) {
+            >.duration {
+              font-size: 1.3rem;
+              color: $grey-color-1;
+            }
+
+            >.price {
+              position: relative;
+              right: 0;
+              text-align: left;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+}

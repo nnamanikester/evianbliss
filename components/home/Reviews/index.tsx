@@ -355,6 +355,7 @@ export const Reviews: React.FC<ReviewsProps> = () => {
               target="__blank"
               href={config.REVIEW_URL}
               className="btn btn__primary"
+              rel="nofollow"
             >
               + Add a review
             </a>

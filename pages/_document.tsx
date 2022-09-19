@@ -2,7 +2,7 @@ import { Head, Html, Main, NextScript } from "next/document";
 
 const Document = () => {
   return (
-    <Html>
+    <Html lang="en-US">
       <Head>
         <link
           href="https://cdn.lineicons.com/3.0/lineicons.css"

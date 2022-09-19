@@ -65,14 +65,16 @@ const Header: React.FC<HeaderProps> = () => {
             </div>
 
             <div className="header-logo__container">
-              <Image
-                placeholder="blur"
-                className="header-logo__image"
-                src={require("/public/logo.png")}
-                width="120rem"
-                height="45rem"
-                alt="Evian Bliss Logo"
-              />
+              <Link href="/">
+                <Image
+                  placeholder="blur"
+                  className="header-logo__image"
+                  src={require("/public/logo.png")}
+                  width="120rem"
+                  height="45rem"
+                  alt="Evian Bliss Logo"
+                />
+              </Link>
             </div>
           </div>
 

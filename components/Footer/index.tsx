@@ -1,4 +1,5 @@
 import Image from "next/future/image";
+import Link from "next/link";
 import * as React from "react";
 import config from "../../config";
 
@@ -12,17 +13,20 @@ const Footer: React.FC<FooterProps> = () => {
           <div className="col-5 mb-2">
             <div className="footer-logo__container">
               <div>
-                <Image
-                  placeholder="blur"
-                  className="footer-logo__image"
-                  src={require("/public/logo.png")}
-                  alt="Evian Bliss Logo"
-                />
+                <Link href="/">
+                  <Image
+                    placeholder="blur"
+                    className="footer-logo__image"
+                    src={require("/public/logo.png")}
+                    alt="Evian Bliss Logo"
+                  />
+                </Link>
                 <ul className="footer-socials mt-2">
                   <li>
                     <a
                       className="ml-1"
                       target="__blank"
+                      rel="nofollow"
                       href={`https://facebook.com/${config.FACEBOOK}`}
                     >
                       <span className="lni lni-facebook-original icon-small" />
@@ -31,6 +35,7 @@ const Footer: React.FC<FooterProps> = () => {
                   <li>
                     <a
                       target="__blank"
+                      rel="nofollow"
                       href={`https://instagram.com/${config.INSTAGRAM}`}
                     >
                       <span className="lni lni-instagram-original icon-small" />
@@ -39,6 +44,7 @@ const Footer: React.FC<FooterProps> = () => {
                   <li>
                     <a
                       target="__blank"
+                      rel="nofollow"
                       href={`https://wa.me/${config.WHATSAPP}`}
                     >
                       <span className="lni lni-whatsapp icon-small" />
@@ -48,13 +54,19 @@ const Footer: React.FC<FooterProps> = () => {
               </div>
               <ul className="footer-menu">
                 <li>
-                  <a href="#">Prices</a>
+                  <Link href="/prices">
+                    <a>Prices</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Articles</a>
+                  <Link href="/articles">
+                    <a>Articles</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Book Appointment</a>
+                  <Link href="/book-appointment">
+                    <a>Book Appointment</a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -63,7 +75,7 @@ const Footer: React.FC<FooterProps> = () => {
             <h6 className="mb-2">
               <span className="lni lni-map-marker" /> Locations:
             </h6>
-            <a target="__blank" href={config.MAP_URL}>
+            <a target="__blank" href={config.MAP_URL} rel="nofollow">
               4 Presidential Road, Nkponkiti Junction, Independence Layout,
               400102, Enugu.
             </a>
@@ -81,11 +93,15 @@ const Footer: React.FC<FooterProps> = () => {
             </h6>
             <p className="mb-1">
               <span className="icon  ion-ios-mail icon-small mr-1" />
-              <a href="mailto:evianbliss@gmail.com"> evianbliss@gmail.com</a>
+              <a href="mailto:evianbliss@gmail.com" rel="nofollow">
+                evianbliss@gmail.com
+              </a>
             </p>
             <p>
               <span className="icon lni lni-phone icon-small mr-1" />
-              <a href="tel:+2348022164416"> +234 802 216 4416</a>
+              <a href="tel:+2348022164416" rel="nofollow">
+                +234 802 216 4416
+              </a>
             </p>
           </div>
         </div>
