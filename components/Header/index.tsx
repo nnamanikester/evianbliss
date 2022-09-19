@@ -7,36 +7,66 @@ import Link from "next/link";
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const [windowSize, setWindowSize] = React.useState({
+    width: 1024,
+    height: 0,
+  });
   const [showSerices, setShowServices] = React.useState(false);
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
   const menuRef = React.useRef(null);
   const mobileMenuRef = React.useRef(null);
   const contactRef = React.useRef(null);
+  const desktopMenuRef = React.useRef(null);
+  const menuContainer = React.useRef(null);
 
   const { pathname } = useRouter();
 
-  const handleServicesDropdown = () => {
-    setShowServices(!showSerices);
-  };
+  React.useEffect(() => {
+    if (document) {
+      const servicesEl = document.getElementById("sevices-dropdown");
+
+      if (servicesEl) {
+        servicesEl.onclick = () => {
+          setShowServices((prev) => !prev);
+        };
+      }
+    }
+  }, []);
 
   React.useEffect(() => {
-    if (menuRef) {
+    if (windowSize.width < 840) {
+      mobileMenuRef
+        // @ts-ignore
+        .current!.appendChild(menuRef.current)
+        .append(contactRef.current);
+    } else {
       // @ts-ignore
-      const menuElement = menuRef.current!.cloneNode(true);
+      desktopMenuRef.current!.appendChild(menuRef.current);
       // @ts-ignore
-      const contactElement = contactRef.current!.cloneNode(true);
-
-      // @ts-ignore
-      menuElement.appendChild(contactElement);
-      // @ts-ignore
-      mobileMenuRef.current!.appendChild(menuElement);
+      menuContainer.current!.appendChild(contactRef.current);
     }
+  }, [windowSize]);
+
+  React.useEffect(() => {
+    function getWindowSize() {
+      const { innerWidth: width, innerHeight: height } = window;
+      return { width, height };
+    }
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
   }, []);
 
   return (
     <>
       <header className="header">
-        <div className="container">
+        <div className="container" ref={menuContainer}>
           <div className="header-logo__container">
             <Image
               placeholder="blur"
@@ -78,7 +108,7 @@ const Header: React.FC<HeaderProps> = () => {
             </div>
           </div>
 
-          <nav>
+          <nav ref={desktopMenuRef}>
             <ul className="header-menu" ref={menuRef}>
               <li>
                 <Link href="/">
@@ -93,12 +123,11 @@ const Header: React.FC<HeaderProps> = () => {
               </li>
               <li className="dropdown">
                 <a
-                  href="#"
+                  id="sevices-dropdown"
                   className={cx({
                     "active-menu":
                       showSerices || pathname.includes("/services"),
                   })}
-                  onClick={handleServicesDropdown}
                 >
                   Services{" "}
                   <i
