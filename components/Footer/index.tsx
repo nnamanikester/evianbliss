@@ -48,13 +48,13 @@ const Footer: React.FC<FooterProps> = () => {
               </div>
               <ul className="footer-menu">
                 <li>
-                  <a href="#">About</a>
+                  <a href="#">Prices</a>
                 </li>
                 <li>
-                  <a href="#">Contacts</a>
+                  <a href="#">Articles</a>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <a href="#">Book Appointment</a>
                 </li>
               </ul>
             </div>
@@ -79,12 +79,12 @@ const Footer: React.FC<FooterProps> = () => {
             <h6 className="mb-2">
               <span className="lni lni-headphone-alt" /> Contact:
             </h6>
-            <p>
-              Email:
+            <p className="mb-1">
+              <span className="icon  ion-ios-mail icon-small mr-1" />
               <a href="mailto:evianbliss@gmail.com"> evianbliss@gmail.com</a>
             </p>
             <p>
-              Phone Number:
+              <span className="icon lni lni-phone icon-small mr-1" />
               <a href="tel:+2348022164416"> +234 802 216 4416</a>
             </p>
           </div>

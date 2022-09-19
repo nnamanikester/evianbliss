@@ -89,17 +89,6 @@ const Header: React.FC<HeaderProps> = () => {
                   </a>
                 </Link>
               </li>
-              <li>
-                <Link href="/about">
-                  <a
-                    className={cx({
-                      "active-menu": pathname == "/about",
-                    })}
-                  >
-                    About
-                  </a>
-                </Link>
-              </li>
               <li className="dropdown">
                 <a
                   href="#"
@@ -326,13 +315,24 @@ const Header: React.FC<HeaderProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact-us">
+                <Link href="/book-appointment">
                   <a
                     className={cx({
-                      "active-menu": pathname == "/contact-us",
+                      "active-menu": pathname == "/book-appointment",
                     })}
                   >
-                    Contact Us
+                    Book Appointment
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/articles">
+                  <a
+                    className={cx({
+                      "active-menu": pathname == "/articles",
+                    })}
+                  >
+                    Articles
                   </a>
                 </Link>
               </li>

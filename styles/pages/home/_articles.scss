@@ -1,0 +1,59 @@
+.articles {
+  margin-bottom: 15rem;
+
+  @include respond(tablet-port) {
+    margin-bottom: 7rem;
+  }
+
+  .articles-list {
+    justify-content: space-between;
+
+    .article {
+      width: 32%;
+      margin-right: 2rem;
+
+      .article-title {
+        margin-bottom: 1rem;
+      }
+
+      @include respond(tablet-land) {
+        width: 48%;
+      }
+
+      @include respond(mobile-xl) {
+        width: 100%;
+      }
+
+      .article-date {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .article-image {
+        width: 100%;
+        height: 30rem;
+        margin-bottom: 1rem;
+
+        @include respond(mobile-xl) {
+          height: 25rem;
+        }
+
+        @include respond(mobile-l) {
+          height: 20rem;
+        }
+
+        >img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .article-content {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+
+}

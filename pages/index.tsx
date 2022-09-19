@@ -9,6 +9,7 @@ import {
   WhyChoose,
   PhotoGallery,
   Questions,
+  Article,
 } from "../components/home";
 import MetaTags from "../components/MetaTags";
 
@@ -31,6 +32,8 @@ const HomePage: NextPage = () => {
         <Schedule />
 
         <Reviews />
+
+        <Article />
 
         <PhotoGallery />
 
