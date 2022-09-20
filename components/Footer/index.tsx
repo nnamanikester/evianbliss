@@ -26,7 +26,6 @@ const Footer: React.FC<FooterProps> = () => {
                     <a
                       className="ml-1"
                       target="__blank"
-                      rel="nofollow"
                       href={`https://facebook.com/${config.FACEBOOK}`}
                     >
                       <span className="lni lni-facebook-original icon-small" />
@@ -34,8 +33,16 @@ const Footer: React.FC<FooterProps> = () => {
                   </li>
                   <li>
                     <a
+                      className="ml-1"
                       target="__blank"
-                      rel="nofollow"
+                      href={`https://twitter.com/${config.TWITTER}`}
+                    >
+                      <span className="lni lni-twitter-original icon-small" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="__blank"
                       href={`https://instagram.com/${config.INSTAGRAM}`}
                     >
                       <span className="lni lni-instagram-original icon-small" />
@@ -44,7 +51,6 @@ const Footer: React.FC<FooterProps> = () => {
                   <li>
                     <a
                       target="__blank"
-                      rel="nofollow"
                       href={`https://wa.me/${config.WHATSAPP}`}
                     >
                       <span className="lni lni-whatsapp icon-small" />

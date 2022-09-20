@@ -8,7 +8,7 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const [windowSize, setWindowSize] = React.useState({
-    width: 1024,
+    width: 800,
     height: 0,
   });
   const [showSerices, setShowServices] = React.useState(false);
@@ -52,6 +52,9 @@ const Header: React.FC<HeaderProps> = () => {
       const { innerWidth: width, innerHeight: height } = window;
       return { width, height };
     }
+
+    setWindowSize(getWindowSize());
+
     function handleWindowResize() {
       setWindowSize(getWindowSize());
     }
@@ -68,14 +71,16 @@ const Header: React.FC<HeaderProps> = () => {
       <header className="header">
         <div className="container" ref={menuContainer}>
           <div className="header-logo__container">
-            <Image
-              placeholder="blur"
-              className="header-logo__image"
-              src={require("/public/logo.png")}
-              width="120rem"
-              height="45rem"
-              alt="Evian Bliss Logo"
-            />
+            <Link href="/">
+              <Image
+                placeholder="blur"
+                className="header-logo__image"
+                src={require("/public/logo.png")}
+                width="120rem"
+                height="45rem"
+                alt="Evian Bliss Logo"
+              />
+            </Link>
           </div>
 
           <div
