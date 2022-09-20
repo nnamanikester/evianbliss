@@ -31,9 +31,12 @@ export const Article: React.FC<ArticleProps> = () => {
               </div>
               <article className="article-content">
                 <p className="article-date">July 14, 2021.</p>
-                <h4 className="article-title">
-                  How to convert a relaxed hair to a natural hair
-                </h4>
+
+                <Link href="/articles/article-title">
+                  <h4 className="article-title">
+                    How to convert a relaxed hair to a natural hair
+                  </h4>
+                </Link>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Voluptas ea amet quam ab perspiciatis totam magni assumenda
@@ -42,9 +45,12 @@ export const Article: React.FC<ArticleProps> = () => {
                 </p>
               </article>
               <div className="article-footer">
-                <a href="#">
-                  Learn More <span className="lni lni-arrow-right icon-small" />
-                </a>
+                <Link href="/articles/article-title">
+                  <a>
+                    Learn More{" "}
+                    <span className="lni lni-arrow-right icon-small" />
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="article" ref={articleRef}>
@@ -58,9 +64,12 @@ export const Article: React.FC<ArticleProps> = () => {
               </div>
               <article className="article-content">
                 <p className="article-date">July 14, 2021.</p>
-                <h4 className="article-title">
-                  How to convert a relaxed hair to a natural hair
-                </h4>
+
+                <Link href="/articles/article-title">
+                  <h4 className="article-title">
+                    How to convert a relaxed hair to a natural hair
+                  </h4>
+                </Link>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Voluptas ea amet quam ab perspiciatis totam magni assumenda
@@ -69,9 +78,12 @@ export const Article: React.FC<ArticleProps> = () => {
                 </p>
               </article>
               <div className="article-footer">
-                <a href="#">
-                  Learn More <span className="lni lni-arrow-right icon-small" />
-                </a>
+                <Link href="/articles/article-title">
+                  <a>
+                    Learn More{" "}
+                    <span className="lni lni-arrow-right icon-small" />
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="article" ref={articleRef}>
@@ -85,9 +97,11 @@ export const Article: React.FC<ArticleProps> = () => {
               </div>
               <article className="article-content">
                 <p className="article-date">July 14, 2021.</p>
-                <h4 className="article-title">
-                  How to convert a relaxed hair to a natural hair
-                </h4>
+                <Link href="/articles/article-title">
+                  <h4 className="article-title">
+                    How to convert a relaxed hair to a natural hair
+                  </h4>
+                </Link>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Voluptas ea amet quam ab perspiciatis totam magni assumenda
@@ -96,9 +110,12 @@ export const Article: React.FC<ArticleProps> = () => {
                 </p>
               </article>
               <div className="article-footer">
-                <a href="#">
-                  Learn More <span className="lni lni-arrow-right icon-small" />
-                </a>
+                <Link href="/articles/article-title">
+                  <a>
+                    Learn More{" "}
+                    <span className="lni lni-arrow-right icon-small" />
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="article" ref={articleRef}>
@@ -112,9 +129,12 @@ export const Article: React.FC<ArticleProps> = () => {
               </div>
               <article className="article-content">
                 <p className="article-date">July 14, 2021.</p>
-                <h4 className="article-title">
-                  How to convert a relaxed hair to a natural hair
-                </h4>
+
+                <Link href="/articles/article-title">
+                  <h4 className="article-title">
+                    How to convert a relaxed hair to a natural hair
+                  </h4>
+                </Link>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Voluptas ea amet quam ab perspiciatis totam magni assumenda
@@ -123,9 +143,12 @@ export const Article: React.FC<ArticleProps> = () => {
                 </p>
               </article>
               <div className="article-footer">
-                <a href="#">
-                  Learn More <span className="lni lni-arrow-right icon-small" />
-                </a>
+                <Link href="/articles/article-title">
+                  <a>
+                    Learn More{" "}
+                    <span className="lni lni-arrow-right icon-small" />
+                  </a>
+                </Link>
               </div>
             </div>
           </Carousel>

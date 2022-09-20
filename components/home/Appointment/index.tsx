@@ -10,17 +10,17 @@ export const Appointment: React.FC<AppointmentProps> = () => {
           <h3 className="mb-2">
             Any Hair Texture You Have, We Make You Adore It!
           </h3>
-          <form method="POST" action="">
+          <form method="GET" action="/book-appointment">
             <div className="row mb-2">
-              <div className="col-3 appointment-input">
+              <div className="col-4 appointment-input">
                 <input
                   className="input"
-                  name="name"
+                  name="fullname"
                   type="text"
-                  placeholder="Name"
+                  placeholder="Full name"
                 />
               </div>
-              <div className="col-3 appointment-input">
+              <div className="col-4 appointment-input">
                 <input
                   className="input"
                   name="phone"
@@ -28,32 +28,19 @@ export const Appointment: React.FC<AppointmentProps> = () => {
                   placeholder="Phone number"
                 />
               </div>
-              <div className="col-3 appointment-input">
-                <select
-                  placeholder="Choose service"
-                  className="input"
-                  name="service"
-                >
-                  <option>Hair dressing</option>
-                  <option>Braiding</option>
-                  <option>Parking Gel</option>
-                  <option>Weaving</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div className="col-3 appointment-input">
+              <div className="col-4 appointment-input">
                 <input
                   className="input"
-                  name="date"
-                  type="date"
-                  placeholder="Date & time"
+                  name="email"
+                  type="email-address"
+                  placeholder="Email address"
                 />
               </div>
             </div>
 
-            <a href="#" className="btn btn__primary" type="submit">
+            <button className="btn btn__primary" type="submit">
               Book an appointment
-            </a>
+            </button>
           </form>
         </div>
       </section>

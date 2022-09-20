@@ -1,0 +1,152 @@
+.article {
+  margin-bottom: 15rem;
+
+  .blog-box {
+    justify-content: space-between;
+
+    @include respond(laptop-s) {
+      display: block;
+    }
+  }
+
+  .article-parallax {
+    position: relative;
+
+    >img {
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+
+      @include respond(mobile-xl) {
+        height: 10rem;
+      }
+    }
+
+
+    .article-title {
+      position: absolute;
+      left: 0;
+      top: 30%;
+      background-color: $white-color;
+      display: inline-block;
+      padding: 1rem;
+      font-weight: 700;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      max-width: 80%;
+
+      @include respond(laptop-l) {
+        font-size: 2rem;
+      }
+
+      @include respond(laptop-s) {
+        font-size: 1.8rem;
+      }
+
+      @include respond(tablet-land) {
+        font-size: 1.5rem;
+      }
+
+      @include respond(tablet-port) {
+        font-size: 1.3rem;
+      }
+
+      @include respond(mobile-xl) {
+        font-size: 1rem;
+        top: 20%;
+      }
+    }
+  }
+
+  .date {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .write-up {
+    @include respond(laptop-s) {
+      width: 100%;
+    }
+  }
+
+  .content {
+    margin-bottom: 15rem;
+
+
+    >p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    >p,
+    li {
+      text-align: justify;
+    }
+  }
+
+
+  .offer-box {
+    @include respond(laptop-s) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+
+    .blog {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @include respond(laptop-s) {
+        width: 48%;
+        margin-bottom: 5rem;
+      }
+
+      @include respond(mobile-xl) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .blog-title {
+        margin-bottom: 1rem;
+      }
+
+      .blog-date {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .blog-image {
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 1rem;
+
+        @include respond(mobile-xl) {
+          height: 25rem;
+        }
+
+        @include respond(mobile-l) {
+          height: 20rem;
+        }
+
+        >img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .blog-content {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

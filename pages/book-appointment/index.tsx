@@ -7,8 +7,23 @@ import Image from "next/future/image";
 import config from "../../config";
 import Offer from "../../components/Offer";
 import Breadcrum from "../../components/Breadcrum";
+import { useRouter } from "next/router";
 
 const AppointmentPage: NextPage = () => {
+  const { query } = useRouter();
+  const [isNewClient, setIsNewClient] = React.useState(true);
+  const [email, setEmail] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [fullname, setFullname] = React.useState("");
+
+  React.useEffect(() => {
+    if (query) {
+      setEmail(query.email as string);
+      setPhone(query.phone as string);
+      setFullname(query.fullname as string);
+    }
+  }, [query]);
+
   return (
     <>
       <MetaTags
@@ -36,14 +51,21 @@ const AppointmentPage: NextPage = () => {
             <div className="radio-group">
               <p className="mb-2">Are you a new client?</p>
               <div className="radio-box">
-                <input type="radio" name="new_client" id="new-client" />
+                <input
+                  checked={isNewClient}
+                  onChange={() => setIsNewClient(true)}
+                  type="radio"
+                  name="new_client"
+                  id="new-client"
+                />
                 <label htmlFor="new-client">
                   <span className="bold ml-1">Yes,</span> I am a new client.
                 </label>
               </div>
               <div className="radio-box">
                 <input
-                  checked
+                  checked={!isNewClient}
+                  onChange={() => setIsNewClient(false)}
                   type="radio"
                   name="new_client"
                   id="existing-client"
@@ -61,6 +83,8 @@ const AppointmentPage: NextPage = () => {
                   Full name <span className="required">*</span>
                 </label>
                 <input
+                  value={fullname}
+                  onChange={({ target }) => setFullname(target.value)}
                   placeholder="Enter your full name"
                   type="text"
                   name="fullname"
@@ -73,6 +97,8 @@ const AppointmentPage: NextPage = () => {
                   Phone number <span className="required">*</span>
                 </label>
                 <input
+                  value={phone}
+                  onChange={({ target }) => setPhone(target.value)}
                   placeholder="Enter your phone number"
                   type="tel"
                   name="phone-number"
@@ -83,6 +109,8 @@ const AppointmentPage: NextPage = () => {
               <div className="input-group col-6">
                 <label htmlFor="email">Email address</label>
                 <input
+                  value={email}
+                  onChange={({ target }) => setEmail(target.value)}
                   placeholder="Enter your email address"
                   type="email-address"
                   name="email"

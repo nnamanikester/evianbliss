@@ -1,4 +1,5 @@
 import Image from "next/future/image";
+import Link from "next/link";
 import * as React from "react";
 import config from "../../../config";
 
@@ -19,9 +20,9 @@ export const Schedule: React.FC<ScheduleProps> = () => {
                 voluptatem doloremque maiores, dolorum quasi voluptatum quos
                 necessitatibus alias esse delectus voluptatibus? Consequuntur.
               </p>
-              <a href="#" className="btn btn__primary mb-1">
-                Book an appointment
-              </a>
+              <Link href="/book-appointment">
+                <a className="btn btn__primary mb-1">Book an appointment</a>
+              </Link>
               <br />
               <a href={`tel:${config.PHONE}`} className="btn btn__secondary">
                 {config.PHONE}

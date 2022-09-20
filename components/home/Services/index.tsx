@@ -3,6 +3,7 @@ import * as React from "react";
 import cx from "classnames";
 import renderHTML from "react-render-html";
 import config from "../../../config";
+import Link from "next/link";
 
 interface ServicesProps {}
 
@@ -266,9 +267,9 @@ export const Services: React.FC<ServicesProps> = () => {
                     {renderHTML(selectedService?.description || "")}
                   </p>
 
-                  <a href="#" className="btn btn__primary mt-2">
-                    Book an appointment
-                  </a>
+                  <Link href="/book-appointment">
+                    <a className="btn btn__primary mt-2">Book an appointment</a>
+                  </Link>
                 </div>
                 <div className="col-4 service__image-container">
                   {selectedServiceImage && (
