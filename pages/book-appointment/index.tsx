@@ -132,16 +132,16 @@ const AppointmentPage: NextPage = () => {
                 <label htmlFor="email">Pick a date</label>
                 <AppointmentCalendar />
               </div>
-
-              <p className="mb-2">
-                NB: You will be contacted by one of our representatives as soon
-                as possible to confirm your appointment date and time.
-              </p>
-
-              <a href="#" className="btn btn__primary btn__full-width">
-                Book Appointment
-              </a>
             </div>
+
+            <p className="mb-2">
+              NB: You will be contacted by one of our representatives as soon as
+              possible to confirm your appointment date and time.
+            </p>
+
+            <a href="#" className="btn btn__primary btn__full-width">
+              Book Appointment
+            </a>
           </div>
           <div className="col-4">
             <Offer />

@@ -6,9 +6,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @include respond(laptop-s) {
+      display: block;
+    }
+
     .form {
       background-color: $grey-color-3;
       padding: 4rem;
+
+      @include respond(laptop-s) {
+        width: 100%;
+        margin-bottom: 4rem;
+      }
 
       .radio-group {
         padding: 1rem;
@@ -16,15 +25,19 @@
         .radio-box {
           display: inline-block;
           margin-right: 2rem;
-
         }
       }
 
       .row {
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .input-group {
           padding: 1rem;
+
+          @include respond(mobile-xl) {
+            width: 100%;
+          }
         }
       }
     }
