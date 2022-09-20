@@ -1,9 +1,11 @@
-import type { NextPage } from "next";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import MetaTags from "../../../components/MetaTags";
 
 interface ServicePageProps {
-  service: any;
+  service: {
+    name: string;
+  };
 }
 
 const ServicePage: NextPage<ServicePageProps> = ({ service }) => {
@@ -19,6 +21,39 @@ const ServicePage: NextPage<ServicePageProps> = ({ service }) => {
       <div className="service"></div>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps<ServicePageProps> = async () => {
+  return {
+    props: {
+      service: {
+        name: "Hair Styling Braids",
+      },
+    },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      {
+        params: {
+          serviceId: "service-title",
+        },
+      },
+      {
+        params: {
+          serviceId: "service-title-1",
+        },
+      },
+      {
+        params: {
+          serviceId: "service-title-2",
+        },
+      },
+    ],
+    fallback: false,
+  };
 };
 
 export default ServicePage;

@@ -149,22 +149,34 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Braids</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -172,22 +184,34 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Bridal Hair Service</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -195,22 +219,34 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Cornrow</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -218,22 +254,34 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Twists & Bantu</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -241,22 +289,34 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Braids</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -264,22 +324,34 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Bridal Hair Service</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -287,22 +359,34 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Cornrow</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -310,10 +394,14 @@ const Header: React.FC<HeaderProps> = () => {
                       <h5>Twists & Bantu</h5>
                       <ul>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
                           <a href="#">
@@ -321,13 +409,19 @@ const Header: React.FC<HeaderProps> = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Hair Dressing Bottox</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Hair Dressing Bottox</a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">Braiding</a>
+                          <Link href={`/services/service-title`}>
+                            <a>Braiding</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
