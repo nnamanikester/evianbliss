@@ -15,6 +15,7 @@ model Customer {
   fullname String
   email String?
   phone String
+  dob DateTime?
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
 }
