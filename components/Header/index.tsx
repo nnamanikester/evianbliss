@@ -21,6 +21,10 @@ const Header: React.FC<HeaderProps> = () => {
 
   const { pathname } = useRouter();
 
+  const closeMenu = () => {
+    setShowMobileMenu(false);
+  };
+
   React.useEffect(() => {
     if (document) {
       const servicesEl = document.getElementById("sevices-dropdown");
@@ -102,6 +106,7 @@ const Header: React.FC<HeaderProps> = () => {
             <div className="header-logo__container">
               <Link href="/">
                 <Image
+                  onClick={closeMenu}
                   placeholder="blur"
                   className="header-logo__image"
                   src={require("/public/logo.png")}
@@ -118,6 +123,7 @@ const Header: React.FC<HeaderProps> = () => {
               <li>
                 <Link href="/">
                   <a
+                    onClick={closeMenu}
                     className={cx({
                       "active-menu": pathname == "/",
                     })}
@@ -155,32 +161,32 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -190,32 +196,32 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -225,32 +231,32 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -260,32 +266,32 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -295,32 +301,32 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -330,32 +336,32 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -365,32 +371,32 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -400,12 +406,12 @@ const Header: React.FC<HeaderProps> = () => {
                       <ul>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
@@ -415,17 +421,17 @@ const Header: React.FC<HeaderProps> = () => {
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Hair Dressing Bottox</a>
+                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/services/service-title`}>
-                            <a>Braiding</a>
+                            <a onClick={closeMenu}>Braiding</a>
                           </Link>
                         </li>
                       </ul>
@@ -436,6 +442,7 @@ const Header: React.FC<HeaderProps> = () => {
               <li>
                 <Link href="/prices">
                   <a
+                    onClick={closeMenu}
                     className={cx({
                       "active-menu": pathname == "/prices",
                     })}
@@ -447,6 +454,7 @@ const Header: React.FC<HeaderProps> = () => {
               <li>
                 <Link href="/book-appointment">
                   <a
+                    onClick={closeMenu}
                     className={cx({
                       "active-menu": pathname == "/book-appointment",
                     })}
@@ -458,6 +466,7 @@ const Header: React.FC<HeaderProps> = () => {
               <li>
                 <Link href="/articles">
                   <a
+                    onClick={closeMenu}
                     className={cx({
                       "active-menu": pathname == "/articles",
                     })}

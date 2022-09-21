@@ -1,0 +1,116 @@
+.service {
+  margin-bottom: 15rem;
+
+  @include respond(tablet-port) {
+    margin-bottom: 7rem;
+  }
+
+  .service-parallax {
+    position: relative;
+    margin-bottom: 4rem;
+
+    >img {
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+
+      @include respond(mobile-xl) {
+        height: 10rem;
+      }
+    }
+
+
+    .service-title {
+      position: absolute;
+      left: 0;
+      top: 30%;
+      background-color: $white-color;
+      display: inline-block;
+      padding: 1rem;
+      font-weight: 700;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      max-width: 80%;
+
+      @include respond(laptop-l) {
+        font-size: 2rem;
+      }
+
+      @include respond(laptop-s) {
+        font-size: 1.8rem;
+      }
+
+      @include respond(tablet-land) {
+        font-size: 1.5rem;
+      }
+
+      @include respond(tablet-port) {
+        font-size: 1.3rem;
+      }
+
+      @include respond(mobile-xl) {
+        font-size: 1rem;
+        top: 20%;
+      }
+    }
+  }
+
+  .content-box {
+    margin-bottom: 4rem;
+    text-align: justify;
+  }
+
+  .service-box {
+    justify-content: space-between;
+
+    @include respond(laptop-s) {
+      display: block;
+    }
+  }
+
+  .offer-box {
+    @include respond(laptop-s) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .service-details {
+      margin-bottom: 4rem;
+      background-color: $grey-color-3;
+      width: 100%;
+
+
+      @include respond(laptop-s) {
+        width: 50%;
+      }
+
+      @include respond(mobile-xl) {
+        width: 100%;
+      }
+
+      .service-image {
+        width: 100%;
+        height: 30rem;
+        margin-bottom: 2rem;
+
+        >img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .service-price {
+        padding: .5rem 2rem;
+        font-size: 1.8rem;
+      }
+
+      .service-duration {
+        padding: 1rem 2rem 2rem 2rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

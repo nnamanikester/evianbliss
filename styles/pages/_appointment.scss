@@ -34,6 +34,7 @@
 
         .input-group {
           padding: 1rem;
+          position: relative;
 
           @include respond(mobile-xl) {
             width: 100%;

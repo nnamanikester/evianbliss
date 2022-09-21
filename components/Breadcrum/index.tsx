@@ -18,7 +18,7 @@ const Breadcrum: React.FC<BreadcrumProps> = ({ links }) => {
       <ul className="breadcrum">
         {links.map((item) => (
           <li
-            key={item.url}
+            key={item.title}
             className={cx({
               "breadcrum-previous": !item.currentPage,
               "breadcrum-current": item.currentPage,

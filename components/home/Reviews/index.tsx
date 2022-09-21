@@ -8,7 +8,6 @@ interface ReviewsProps {}
 
 export const Reviews: React.FC<ReviewsProps> = () => {
   const reviewsRef = React.useRef(null);
-  const swiper = useSwiper();
 
   return (
     <>

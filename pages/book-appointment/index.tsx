@@ -124,9 +124,30 @@ const AppointmentPage: NextPage = () => {
                   placeholder="Choose a service"
                   type="text"
                   name="service"
-                  id="service"
-                  className="input"
+                  className="input input-select"
                 />
+                <div className="select-list">
+                  <ul>
+                    <li>Bantu Nuts</li>
+                    <li>Twists</li>
+                    <li>Bridal Hair Service</li>
+                    <li>Natural Hair Twists</li>
+                    <li>Ghana Weaving</li>
+                    <li>Natural Hair UPDO</li>
+                    <li>Bantu Nuts</li>
+                    <li>Twists</li>
+                    <li>Bridal Hair Service</li>
+                    <li>Natural Hair Twists</li>
+                    <li>Ghana Weaving</li>
+                    <li>Natural Hair UPDO</li>
+                    <li>Bantu Nuts</li>
+                    <li>Twists</li>
+                    <li>Bridal Hair Service</li>
+                    <li>Natural Hair Twists</li>
+                    <li>Ghana Weaving</li>
+                    <li>Natural Hair UPDO</li>
+                  </ul>
+                </div>
               </div>
               <div className="input-group col-12 mb-2">
                 <label htmlFor="email">Pick a date</label>

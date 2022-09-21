@@ -23,9 +23,6 @@ interface CategoryT {
 
 const PricesPage: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState<CategoryT>();
-  const [selectedService, setSelectedService] = React.useState<ServiceT>();
-  const [selectedServiceImage, setSelectedServiceImage] =
-    React.useState<string>();
 
   const services: CategoryT[] = React.useMemo(
     () => [

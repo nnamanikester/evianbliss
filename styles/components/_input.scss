@@ -15,3 +15,35 @@
   }
 
 }
+
+.input-group {
+  .input-select:focus+.select-list {
+    padding: 1rem 0;
+    height: 20rem;
+    overflow: scroll;
+    border: .1rem solid $light-primary-color;
+  }
+
+  .select-list {
+    position: absolute;
+    height: 0;
+    width: 93%;
+    left: 1rem;
+    top: 7rem;
+    border-top: 0;
+    background-color: $white-color;
+    overflow: hidden;
+    z-index: 1;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+      border-bottom: .1rem solid $grey-color-3;
+      padding: .5rem 3rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
