@@ -3,14 +3,30 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import type { AppProps } from "next/app";
 import MainLayout from "../layouts/main-layout";
-import MetaTags from "../components/MetaTags";
+import { SessionProvider } from "next-auth/react";
+import AuthLayout from "../layouts/auth-layout";
+import { AuthT } from "../types";
+import { AuthMiddleware } from "../middleware";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps & { Component: { auth: AuthT } }) {
   return (
     <>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <SessionProvider session={session}>
+        {Component.auth ? (
+          <AuthMiddleware auth={Component.auth}>
+            <AuthLayout auth={Component.auth}>
+              <Component {...pageProps} />
+            </AuthLayout>
+          </AuthMiddleware>
+        ) : (
+          <MainLayout>
+            <Component {...pageProps} />
+          </MainLayout>
+        )}
+      </SessionProvider>
     </>
   );
 }

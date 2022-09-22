@@ -1,1 +1,2 @@
-export * from "./customerService";
+export * from "./customersController";
+export * from "./usersController";
