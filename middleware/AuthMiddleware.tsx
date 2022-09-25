@@ -1,6 +1,7 @@
 import { useSession } from "next-auth/react";
 import Router from "next/router";
 import * as React from "react";
+import ScreenLoading from "../components/ScreenLoading";
 import { AuthT } from "../types";
 
 type AuthMiddlewareProps = {
@@ -37,7 +38,7 @@ export const AuthMiddleware: React.FC<AuthMiddlewareProps> = ({
   };
 
   if (status === "loading" || isLoading) {
-    return <div>Loading...</div>;
+    return <ScreenLoading />;
   }
 
   if (role && auth.role.includes(role)) {

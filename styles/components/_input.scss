@@ -18,6 +18,10 @@
 }
 
 .input-group {
+  @include respond(tablet-port) {
+    width: 100% !important;
+  }
+
   .input-select:focus+.select-list {
     padding: 1rem 0;
     height: 20rem;

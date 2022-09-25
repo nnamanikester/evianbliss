@@ -36,7 +36,7 @@ const QuickLinks: React.FC<QuickLinksProps> = () => {
           <div className="quick-links__category">
             <h6>Managements</h6>
             <div className="row quick-links__link-container">
-              <Link href="#">
+              <Link href="/management/service-categories">
                 <div className="col-3 px-1 mb-1">
                   <div className="quick-links__link">
                     <span className="link-icon icon lni lni-list" />

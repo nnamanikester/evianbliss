@@ -12,7 +12,10 @@
 @import './components/calendar';
 @import './components/appointment-calendar';
 @import './components/offer';
-@import './components/quick-links.scss';
+@import './components/quick-links';
+@import './components/table';
+@import './components/loading-ring';
+@import './components/screen-loading';
 
 // Layouts
 @import './layouts/grid';
