@@ -12,6 +12,7 @@
 @import './components/calendar';
 @import './components/appointment-calendar';
 @import './components/offer';
+@import './components/quick-links.scss';
 
 // Layouts
 @import './layouts/grid';
@@ -23,6 +24,7 @@
 @import './pages/articles';
 @import './pages/article';
 @import './pages/service';
+@import './pages/login';
 
 // Abstract
 @import './abstract/utilities';

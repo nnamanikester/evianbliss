@@ -11,7 +11,7 @@ import { AuthMiddleware } from "../middleware";
 function MyApp({
   Component,
   pageProps: { session, ...pageProps },
-}: AppProps & { Component: { auth: AuthT } }) {
+}: AppProps & { Component: { auth: AuthT["auth"] } }) {
   return (
     <>
       <SessionProvider session={session}>

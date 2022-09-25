@@ -6,7 +6,7 @@
   display: inline-block;
   text-align: center;
   border: none;
-  padding: .8rem 0;
+  padding: 1.4rem 0;
 
   @include respond(tablet-port) {
     min-width: 0;

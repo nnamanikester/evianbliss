@@ -1,4 +1,5 @@
 import * as React from "react";
+import QuickLinks from "../../components/QuickLinks";
 import { AuthT } from "../../types";
 
 interface ManagementPageProps {}
@@ -6,7 +7,7 @@ interface ManagementPageProps {}
 const ManagementPage: React.FC<ManagementPageProps> & AuthT = () => {
   return (
     <>
-      <div>Admin for staff</div>
+      <QuickLinks />
     </>
   );
 };

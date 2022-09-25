@@ -5,7 +5,7 @@ import { AuthT } from "../types";
 
 interface AuthLayoutProps {
   children: React.ReactElement;
-  auth: AuthT;
+  auth: AuthT["auth"];
 }
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
