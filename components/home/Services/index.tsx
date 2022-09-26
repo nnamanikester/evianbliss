@@ -206,9 +206,9 @@ export const Services: React.FC<ServicesProps> = () => {
         <div className="container">
           <div className="mb-3">
             <h2>
-              Our Core Beauty
+              Our Core Natural
               <br />
-              Center Services
+              Hair Services
             </h2>
           </div>
 
