@@ -1,17 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import cx from "classnames";
 
-interface QuickLinksProps {}
+interface QuickLinksProps {
+  show: boolean;
+}
 
-const QuickLinks: React.FC<QuickLinksProps> = () => {
+const QuickLinks: React.FC<QuickLinksProps> = ({ show = true }) => {
   return (
     <>
-      <div className="quick-links">
+      <div className={cx({ "quick-links": true, "show-quick-links": show })}>
         <div className="container">
           <div className="quick-links__header">
             <div className="quick-links__logo-container">
-              <Link href="/">
+              <Link href="/management">
                 <Image
                   placeholder="blur"
                   className="quick-links__logo"

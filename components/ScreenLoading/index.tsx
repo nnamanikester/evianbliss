@@ -1,5 +1,5 @@
 import * as React from "react";
-import Loading from "../../pages/management/service-categories/Loading";
+import Loading from "../Loading";
 
 interface ScreenLoadingProps {}
 
@@ -7,7 +7,7 @@ const ScreenLoading: React.FC<ScreenLoadingProps> = () => {
   return (
     <>
       <div className="screen-loading">
-        <Loading />
+        <Loading size="large" />
       </div>
     </>
   );

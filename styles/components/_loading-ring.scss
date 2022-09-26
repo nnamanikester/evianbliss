@@ -39,3 +39,36 @@
     transform: rotate(360deg);
   }
 }
+
+.loading-small {
+  width: 2rem;
+  height: 2rem;
+
+  div {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: .6rem;
+  }
+}
+
+.loading-medium {
+  width: 4rem;
+  height: 4rem;
+
+  div {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: .6rem;
+  }
+}
+
+.loading-large {
+  width: 8rem;
+  height: 8rem;
+
+  div {
+    width: 6.4rem;
+    height: 6.4rem;
+    margin: .8rem;
+  }
+}

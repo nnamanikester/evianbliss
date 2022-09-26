@@ -7,6 +7,7 @@ import { SessionProvider } from "next-auth/react";
 import AuthLayout from "../layouts/auth-layout";
 import { AuthT } from "../types";
 import { AuthMiddleware } from "../middleware";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({
   Component,
@@ -27,6 +28,8 @@ function MyApp({
           </MainLayout>
         )}
       </SessionProvider>
+
+      <Toaster />
     </>
   );
 }
