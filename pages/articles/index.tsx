@@ -8,7 +8,11 @@ import config from "../../config";
 const ArticlesPage: NextPage = () => {
   return (
     <>
-      <MetaTags title="Articles" url="https://evianbliss.com/articles" />
+      <MetaTags
+        title="Articles"
+        url="https://evianbliss.com/articles"
+        description={`${config.SHORT_NAME} natural hair spa articles tailored for you. Learn more about natural hair management.`}
+      />
 
       <div className="articles">
         <div className="container mb-2">

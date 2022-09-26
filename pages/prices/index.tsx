@@ -5,6 +5,7 @@ import * as React from "react";
 import cx from "classnames";
 import Offer from "../../components/Offer";
 import { formatMoney } from "../../utils";
+import config from "../../config";
 
 interface ServiceT {
   id: string;
@@ -164,7 +165,11 @@ const PricesPage: NextPage = () => {
 
   return (
     <>
-      <MetaTags title="Prices" url="https://evianbliss.com/prices" />
+      <MetaTags
+        title="Prices"
+        url="https://evianbliss.com/prices"
+        description={`${config.APP_NAME} service pricing. We have the best services with affordable pricing. No hidden charges.`}
+      />
 
       <div className="prices">
         <div className="container mb-2">

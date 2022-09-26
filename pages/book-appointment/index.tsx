@@ -29,6 +29,7 @@ const AppointmentPage: NextPage = () => {
       <MetaTags
         title="Book An Appointment"
         url="https://evianbliss.com/book-appointment"
+        description={`You want to have a taste of ${config.SHORT_NAME} best natural hair services, why wait? Schedule an appointment with us.`}
       />
 
       <div className="book-appointment">
