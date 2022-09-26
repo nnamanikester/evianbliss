@@ -14,6 +14,7 @@ export interface ServiceT {
   slug: string;
   description: string;
   category_id: string;
+  category: ServiceCategoryT;
   image: string;
   priceFrom: number;
   priceTo: number;

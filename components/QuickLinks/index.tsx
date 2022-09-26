@@ -47,7 +47,7 @@ const QuickLinks: React.FC<QuickLinksProps> = ({ show = true }) => {
                   </div>
                 </div>
               </Link>
-              <Link href="#">
+              <Link href="/management/services">
                 <div className="col-3 px-1 mb-1">
                   <div className="quick-links__link">
                     <span className="link-icon icon lni lni-service" />

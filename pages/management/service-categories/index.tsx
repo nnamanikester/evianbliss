@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import useSWR from "swr";
 import Loading from "../../../components/Loading";
 import ManagementHeader from "../../../components/ManagementHeader";
+import MetaTags from "../../../components/MetaTags";
 import ServiceCategoryList from "../../../components/ServiceCategoryList";
 import { useServiceCategoriesStore } from "../../../state";
 import { AuthT } from "../../../types";
@@ -37,6 +38,8 @@ const ManagementPage: React.FC<ManagementPageProps> & AuthT = () => {
 
   return (
     <>
+      <MetaTags title="Service Category" />
+
       <div>
         <ManagementHeader title="Service Category" />
 

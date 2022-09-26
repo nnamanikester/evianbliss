@@ -9,7 +9,7 @@ const ManagementPage: React.FC<ManagementPageProps> & AuthT = () => {
   return (
     <>
       <MetaTags title="Quick Links" url="https://evianbliss.com/management" />
-      <QuickLinks />
+      <QuickLinks show />
     </>
   );
 };
