@@ -1,0 +1,83 @@
+.table-responsive {
+  @include respond(tablet-port) {
+    overflow-y: scroll;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @include respond(tablet-port) {
+
+    tr,
+    th {
+      min-width: 20rem;
+    }
+  }
+
+  th {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: 1.5rem;
+  }
+
+  td {
+    padding: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  tr {
+    &:hover {
+      background-color: $light-primary-color;
+    }
+  }
+}
+
+.pagination {
+  text-align: right;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    align-items: center;
+
+    li {
+      display: inline-flex;
+      width: 4rem;
+      height: 4rem;
+      border: .1rem solid $light-primary-color;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+
+      &.inactive {
+        background-color: $grey-color-3;
+        border: none;
+
+        &:hover {
+          color: $dark-color;
+          cursor: text;
+        }
+      }
+
+      &.hidden-nav {
+        cursor: text;
+
+        &:hover {
+          background: none;
+          color: $dark-color;
+        }
+      }
+    }
+  }
+}

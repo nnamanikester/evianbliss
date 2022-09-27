@@ -21,6 +21,7 @@ const ServicePage: NextPage<ServicePageProps> = ({ service }) => {
       <MetaTags
         title={`${service.name ?? "Hair Styling"} Service`}
         url={`https://evianbliss.com/services/${query.serviceId}`}
+        description={`${service.name} - All you need to know about ${service.name}. Description, requirements, pricing. Love your hair, Love the texture!`}
       />
 
       <div className="service">

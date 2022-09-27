@@ -26,38 +26,37 @@ export const WhyChoose: React.FC<WhyChooseProps> = () => {
               </h3>
 
               <p className="mb-2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolorem laudantium sit aliquid cupiditate ex quis eveniet
-                architecto tenetur quod, voluptate sapiente, iusto non quaerat
-                deleniti voluptates provident. Nam, possimus vitae?
+                Most people think that having a natural hair is the cause of
+                pains while making their hair, But the real reason is they have
+                the wrong people managing their hair.
               </p>
 
               <p className="mb-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi et inventore molestias eius. Voluptas harum dolores
-                earum nam nesciunt velit odit maxime vel minus mollitia libero,
-                saepe debitis rem ut?
+                For the past few years, we have received complaints from a lot
+                of clients and it all boils down to; being scared of touching
+                their natural hair because it's painful and it doesn't last.
               </p>
 
               <p className="mb-3">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-                nihil ad iure sapiente velit in commodi eveniet cum doloribus.
-                Iusto debitis, facilis blanditiis officiis dolor cumque tenetur
-                dignissimos tempora explicabo.
+                {config.APP_NAME} specializes on natural hair treatments. We
+                nurture, groom, treat and style all natural hair regardless of
+                the texture. We have natural hair experts that have been into
+                the natural hair management for over 5 years and ensures our
+                clients have painless hair experience.
               </p>
 
               <div className="row experience">
                 <div className="col-4">
-                  <h3>10 years</h3>
-                  <span>of experience</span>
+                  <h3>5 years+</h3>
+                  <span>experience</span>
                 </div>
                 <div className="col-4">
-                  <h3>97%</h3>
-                  <span>of happy clients</span>
+                  <h3>99%</h3>
+                  <span>happy clients</span>
                 </div>
                 <div className="col-4">
-                  <h3>24</h3>
-                  <span>types of services</span>
+                  <h3>24+</h3>
+                  <span>services</span>
                 </div>
               </div>
             </article>

@@ -15,10 +15,9 @@ export const Schedule: React.FC<ScheduleProps> = () => {
               <h2>DON&apos;T WAIT!</h2>
               <h5 className="mb-3">Schedule Your Appointment</h5>
               <p className="mb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                ex adipisci voluptates. Ea voluptates nobis ipsam. Debitis
-                voluptatem doloremque maiores, dolorum quasi voluptatum quos
-                necessitatibus alias esse delectus voluptatibus? Consequuntur.
+                You want to have a taste of the best natural hair services, why
+                wait? Schedule an appointment with us and one of our
+                representatives will respond to you as soon as possible.
               </p>
               <Link href="/book-appointment">
                 <a className="btn btn__primary mb-1">Book an appointment</a>

@@ -9,6 +9,7 @@ import config from "../../../config";
 interface ArticlePageProps {
   article: {
     title: string;
+    exerpt: string;
   };
 }
 
@@ -20,6 +21,7 @@ const ArticlePage: NextPage<ArticlePageProps> = ({ article }) => {
       <MetaTags
         title={`${article.title ?? "Hair Styling "} Article`}
         url={`https://evianbliss.com/articles/${query.articleId}`}
+        description={article.exerpt}
       />
 
       <div className="article">
@@ -283,6 +285,7 @@ export const getStaticProps: GetStaticProps<ArticlePageProps> = async () => {
     props: {
       article: {
         title: "Article Title",
+        exerpt: "Article exerpt",
       },
     },
   };
