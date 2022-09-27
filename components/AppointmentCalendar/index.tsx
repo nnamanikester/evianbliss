@@ -53,7 +53,6 @@ const AppointmentCalendar: React.FC<AppointmentCalendarProps> = ({
       );
 
       setBooked(groupedAppointments);
-      console.log(groupedAppointments);
       setIsLoading(false);
     } catch (e: any) {
       console.log(e?.response?.data || e?.message);

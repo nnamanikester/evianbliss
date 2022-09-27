@@ -3,10 +3,24 @@ import * as React from "react";
 import cx from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { fetcher } from "../../utils";
+import useSWR from "swr";
+import { ServiceCategoryT } from "../../types";
+import { useServiceCategoriesStore } from "../../state";
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const { data: fetchedCategories } = useSWR<ServiceCategoryT[]>(
+    "/api/categories",
+    fetcher
+  );
+
+  const setCategories = useServiceCategoriesStore(
+    (state) => state.setCategories
+  );
+  const categories = useServiceCategoriesStore((state) => state.categories);
+
   const [windowSize, setWindowSize] = React.useState({
     width: 800,
     height: 0,
@@ -21,9 +35,11 @@ const Header: React.FC<HeaderProps> = () => {
 
   const { pathname } = useRouter();
 
-  const closeMenu = () => {
-    setShowMobileMenu(false);
-  };
+  React.useEffect(() => {
+    if (fetchedCategories) {
+      setCategories(fetchedCategories);
+    }
+  }, [fetchedCategories]);
 
   React.useEffect(() => {
     if (document) {
@@ -69,6 +85,10 @@ const Header: React.FC<HeaderProps> = () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
+
+  const closeMenu = () => {
+    setShowMobileMenu(false);
+  };
 
   return (
     <>
