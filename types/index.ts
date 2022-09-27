@@ -8,6 +8,11 @@ export interface AuthT {
   };
 }
 
+export interface SlotT {
+  time: string;
+  date: Date | string;
+}
+
 export interface ServiceT {
   id: string;
   name: string;
@@ -32,4 +37,26 @@ export interface ServiceCategoryT {
   status: "active" | "inactive" | null;
   created_at: Date | string | number;
   updated_at: Date | string | number;
+}
+
+export interface CustomerT {
+  id?: string;
+  fullname: string;
+  email: string;
+  phone: string;
+  dob?: Date | string | null;
+  appointments?: AppointmentT[];
+  create_at?: Date | string;
+  updated_at?: Date | string;
+}
+
+export interface AppointmentT {
+  id?: string;
+  service?: string;
+  returning: boolean;
+  customer_id: string;
+  time: Date | string;
+  status?: "pending" | "expired" | "done";
+  created_at?: Date | string;
+  updated_at?: Date | string;
 }

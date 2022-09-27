@@ -13,11 +13,11 @@ datasource db {
 model Customer {
   id String @id @default(auto())  @map("_id") @db.ObjectId
   fullname String
-  email String
+  email String @unique
   phone String @unique(sort: Desc)
   dob DateTime?
   appointments Appointment[]
-  createAt DateTime @default(now())
+  create_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
   @@index([id, phone, email])
@@ -83,6 +83,9 @@ model Employee {
   email String @unique()
   phone String @unique()
   join_date DateTime @default(now())
+  account_number String?
+  account_name String?
+  bank_name String?
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
@@ -141,7 +144,6 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map("verificationtokens")
 }
-
 
 enum Role {
   admin
