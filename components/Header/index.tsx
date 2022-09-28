@@ -96,14 +96,16 @@ const Header: React.FC<HeaderProps> = () => {
         <div className="container" ref={menuContainer}>
           <div className="header-logo__container">
             <Link href="/">
-              <Image
-                placeholder="blur"
-                className="header-logo__image"
-                src={require("/public/logo.png")}
-                width="120rem"
-                height="45rem"
-                alt="Evian Bliss Logo"
-              />
+              <a>
+                <Image
+                  placeholder="blur"
+                  className="header-logo__image"
+                  src={require("/public/logo.png")}
+                  width="120rem"
+                  height="45rem"
+                  alt="Evian Bliss Logo"
+                />
+              </a>
             </Link>
           </div>
 
@@ -125,15 +127,17 @@ const Header: React.FC<HeaderProps> = () => {
 
             <div className="header-logo__container">
               <Link href="/">
-                <Image
-                  onClick={closeMenu}
-                  placeholder="blur"
-                  className="header-logo__image"
-                  src={require("/public/logo.png")}
-                  width="120rem"
-                  height="45rem"
-                  alt="Evian Bliss Logo"
-                />
+                <a>
+                  <Image
+                    onClick={closeMenu}
+                    placeholder="blur"
+                    className="header-logo__image"
+                    src={require("/public/logo.png")}
+                    width="120rem"
+                    height="45rem"
+                    alt="Evian Bliss Logo"
+                  />
+                </a>
               </Link>
             </div>
           </div>

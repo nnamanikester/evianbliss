@@ -263,9 +263,9 @@ export const Services: React.FC<ServicesProps> = () => {
                   <h5 className="mb-2 bold text-dark">
                     {selectedService?.name}
                   </h5>
-                  <p className="mb-2">
+                  <div className="mb-2">
                     {renderHTML(selectedService?.description || "")}
-                  </p>
+                  </div>
 
                   <Link href="/book-appointment">
                     <a className="btn btn__primary mt-2">Book an appointment</a>

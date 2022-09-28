@@ -14,12 +14,14 @@ const Footer: React.FC<FooterProps> = () => {
             <div className="footer-logo__container">
               <div>
                 <Link href="/">
-                  <Image
-                    placeholder="blur"
-                    className="footer-logo__image"
-                    src={require("/public/logo.png")}
-                    alt="Evian Bliss Logo"
-                  />
+                  <a>
+                    <Image
+                      placeholder="blur"
+                      className="footer-logo__image"
+                      src={require("/public/logo.png")}
+                      alt="Evian Bliss Logo"
+                    />
+                  </a>
                 </Link>
                 <ul className="footer-socials mt-2">
                   <li>
