@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import MetaTags from "../../components/MetaTags";
 import * as React from "react";
 import AppointmentCalendar from "../../components/AppointmentCalendar";
-import Image from "next/future/image";
 import config from "../../config";
 import Offer from "../../components/Offer";
 import Breadcrum from "../../components/Breadcrum";
 import { useRouter } from "next/router";
-import { ServiceCategoryT, ServiceT, SlotT } from "../../types";
+import { ServiceCategoryT, SlotT } from "../../types";
 import toast from "react-hot-toast";
 import axios from "axios";
 import dayjs from "dayjs";
+import cx from "classnames";
+import { useServiceCategoriesStore } from "../../state";
 
 const AppointmentPage: NextPage = () => {
   const { query } = useRouter();
@@ -23,6 +23,28 @@ const AppointmentPage: NextPage = () => {
   const [selectedService, setSelectedService] =
     React.useState<ServiceCategoryT>();
   const [isLoading, setIsLoading] = React.useState(false);
+  const [serviceName, setServiceName] = React.useState("");
+  const [services, setServices] = React.useState<ServiceCategoryT[]>([]);
+  const [isServiceListOpen, setIsServiceListOpen] = React.useState(false);
+
+  const fetchedServices = useServiceCategoriesStore(
+    (state) => state.categories
+  );
+
+  React.useEffect(() => {
+    if (fetchedServices) {
+      setServices(fetchedServices);
+    }
+  }, [fetchedServices]);
+
+  React.useEffect(() => {
+    if (fetchedServices) {
+      const newServices = fetchedServices.filter((serv) =>
+        serv.name.toLowerCase().includes(serviceName.toLowerCase())
+      );
+      setServices(newServices);
+    }
+  }, [serviceName, fetchedServices]);
 
   React.useEffect(() => {
     if (query) {
@@ -61,7 +83,7 @@ const AppointmentPage: NextPage = () => {
     setIsLoading(true);
     try {
       toast.loading("Booking an appointment...", { position: "bottom-center" });
-      const res = await axios.post("/api/appointments", {
+      await axios.post("/api/appointments", {
         fullname,
         phone,
         email,
@@ -69,7 +91,6 @@ const AppointmentPage: NextPage = () => {
         time: dayjs(`${timeSlot?.date} ${timeSlot?.time}`).toISOString(),
         returning: isNewClient,
       });
-      console.log(res.data);
       toast.dismiss();
       setIsLoading(false);
       toast.success(
@@ -194,29 +215,36 @@ const AppointmentPage: NextPage = () => {
                     type="text"
                     name="service"
                     className="input input-select"
+                    onFocus={() => setIsServiceListOpen(true)}
+                    value={serviceName || selectedService?.name}
+                    onChange={({ target }) => {
+                      setServiceName(target.value);
+                      setSelectedService(undefined);
+                    }}
                   />
-                  <div className="select-list">
-                    <ul>
-                      <li>Bantu Nuts</li>
-                      <li>Twists</li>
-                      <li>Bridal Hair Service</li>
-                      <li>Natural Hair Twists</li>
-                      <li>Ghana Weaving</li>
-                      <li>Natural Hair UPDO</li>
-                      <li>Bantu Nuts</li>
-                      <li>Twists</li>
-                      <li>Bridal Hair Service</li>
-                      <li>Natural Hair Twists</li>
-                      <li>Ghana Weaving</li>
-                      <li>Natural Hair UPDO</li>
-                      <li>Bantu Nuts</li>
-                      <li>Twists</li>
-                      <li>Bridal Hair Service</li>
-                      <li>Natural Hair Twists</li>
-                      <li>Ghana Weaving</li>
-                      <li>Natural Hair UPDO</li>
-                    </ul>
-                  </div>
+                  {services.length > 0 && (
+                    <div
+                      className={cx({
+                        "select-list": true,
+                        "select-list--open": isServiceListOpen,
+                      })}
+                    >
+                      <ul>
+                        {services.map((serv) => (
+                          <li
+                            onClick={() => {
+                              setSelectedService(serv);
+                              setIsServiceListOpen(false);
+                              setServiceName("");
+                            }}
+                            key={serv.id}
+                          >
+                            {serv.name}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
                 <div className="input-group col-12 mb-2">
                   <label htmlFor="email">Pick a date</label>

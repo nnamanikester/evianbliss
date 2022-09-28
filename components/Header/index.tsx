@@ -3,10 +3,24 @@ import * as React from "react";
 import cx from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { fetcher } from "../../utils";
+import useSWR from "swr";
+import { ServiceCategoryT } from "../../types";
+import { useServiceCategoriesStore } from "../../state";
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const { data: fetchedCategories } = useSWR<ServiceCategoryT[]>(
+    "/api/categories",
+    fetcher
+  );
+
+  const setCategories = useServiceCategoriesStore(
+    (state) => state.setCategories
+  );
+  const categories = useServiceCategoriesStore((state) => state.categories);
+
   const [windowSize, setWindowSize] = React.useState({
     width: 800,
     height: 0,
@@ -21,9 +35,11 @@ const Header: React.FC<HeaderProps> = () => {
 
   const { pathname } = useRouter();
 
-  const closeMenu = () => {
-    setShowMobileMenu(false);
-  };
+  React.useEffect(() => {
+    if (fetchedCategories) {
+      setCategories(fetchedCategories);
+    }
+  }, [fetchedCategories]);
 
   React.useEffect(() => {
     if (document) {
@@ -70,20 +86,26 @@ const Header: React.FC<HeaderProps> = () => {
     };
   }, []);
 
+  const closeMenu = () => {
+    setShowMobileMenu(false);
+  };
+
   return (
     <>
       <header className="header">
         <div className="container" ref={menuContainer}>
           <div className="header-logo__container">
             <Link href="/">
-              <Image
-                placeholder="blur"
-                className="header-logo__image"
-                src={require("/public/logo.png")}
-                width="120rem"
-                height="45rem"
-                alt="Evian Bliss Logo"
-              />
+              <a>
+                <Image
+                  placeholder="blur"
+                  className="header-logo__image"
+                  src={require("/public/logo.png")}
+                  width="120rem"
+                  height="45rem"
+                  alt="Evian Bliss Logo"
+                />
+              </a>
             </Link>
           </div>
 
@@ -105,15 +127,17 @@ const Header: React.FC<HeaderProps> = () => {
 
             <div className="header-logo__container">
               <Link href="/">
-                <Image
-                  onClick={closeMenu}
-                  placeholder="blur"
-                  className="header-logo__image"
-                  src={require("/public/logo.png")}
-                  width="120rem"
-                  height="45rem"
-                  alt="Evian Bliss Logo"
-                />
+                <a>
+                  <Image
+                    onClick={closeMenu}
+                    placeholder="blur"
+                    className="header-logo__image"
+                    src={require("/public/logo.png")}
+                    width="120rem"
+                    height="45rem"
+                    alt="Evian Bliss Logo"
+                  />
+                </a>
               </Link>
             </div>
           </div>

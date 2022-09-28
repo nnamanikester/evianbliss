@@ -22,7 +22,7 @@
     width: 100% !important;
   }
 
-  .input-select:focus+.select-list {
+  .input-select+.select-list--open {
     padding: 1rem 0;
     height: 20rem;
     overflow: scroll;
