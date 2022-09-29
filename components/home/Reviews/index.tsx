@@ -9,19 +9,17 @@ import { ReviewT } from "../../../types";
 
 interface ReviewsProps {}
 
-const REVIEW_URL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${config.GOOGLE_PLACE_ID}&fields=reviews&key=${config.GOOGLE_API_KEY}`;
-
 export const Reviews: React.FC<ReviewsProps> = () => {
   const reviewsRef = React.useRef(null);
   const [reviews, setReviews] = React.useState<ReviewT[]>([]);
 
-  const { data, error } = useSWR(REVIEW_URL, fetcher);
+  const { data, error } = useSWR("/api/reviews", fetcher);
 
   React.useEffect(() => {
     if (data) {
-      setReviews(data.result.reviews);
+      setReviews(data);
     } else if (error) {
-      // console.log(error);
+      console.log(error);
     }
   }, [data, error]);
 
