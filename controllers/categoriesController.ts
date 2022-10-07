@@ -24,6 +24,9 @@ export const getCategories = async (): Promise<any> => {
       where: {
         status: "active",
       },
+      include: {
+        services: true,
+      },
       orderBy: {
         created_at: "desc",
       },

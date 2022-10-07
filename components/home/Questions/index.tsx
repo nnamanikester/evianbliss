@@ -40,7 +40,7 @@ export const Questions: React.FC<QuestionsProps> = () => {
                 placeholder="blur"
                 blurDataURL={config.BLUR_URL}
                 alt="Evian Bliss Hair Spa Question and Answer"
-                src={require("/public/images/joyful-african.jpg")}
+                src={require("/public/images/hair-washing.jpg")}
                 className="question-image"
               />
             </div>

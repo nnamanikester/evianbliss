@@ -2,12 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 import cx from "classnames";
+import { ServiceCategoryT } from "../../types";
+import useSWR from "swr";
+import { fetcher } from "../../utils";
+import { useServiceCategoriesStore } from "../../state";
 
 interface QuickLinksProps {
   show: boolean;
 }
 
 const QuickLinks: React.FC<QuickLinksProps> = ({ show = true }) => {
+  const { data: fetchedCategories } = useSWR<ServiceCategoryT[]>(
+    "/api/categories",
+    fetcher
+  );
+
+  const setCategories = useServiceCategoriesStore(
+    (state) => state.setCategories
+  );
+  const categories = useServiceCategoriesStore((state) => state.categories);
+
+  React.useEffect(() => {
+    if (fetchedCategories) {
+      setCategories(fetchedCategories);
+    }
+  }, [fetchedCategories]);
+
   return (
     <>
       <div className={cx({ "quick-links": true, "show-quick-links": show })}>

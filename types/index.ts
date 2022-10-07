@@ -31,15 +31,15 @@ export interface ServiceT {
   name: string;
   slug: string;
   description: string;
-  category_id: string;
-  category: ServiceCategoryT;
-  image: string;
-  priceFrom: number;
-  priceTo: number;
-  fixedPrice: number;
-  duration: string;
+  category_id: string | null;
+  category: ServiceCategoryT | null;
+  image: string | null;
+  priceFrom?: number | null;
+  priceTo?: number | null;
+  fixedPrice?: number | null;
+  duration?: string | null;
   status: "active" | "inactive";
-  created_at: Date | string | number;
+  created_at: Date | string | number | null;
   updated_at: Date | string | number;
 }
 
@@ -72,4 +72,16 @@ export interface AppointmentT {
   status?: "pending" | "expired" | "done";
   created_at?: Date | string;
   updated_at?: Date | string;
+}
+
+export interface ServiceCreateInputT {
+  name: string;
+  slug: string;
+  description: string;
+  category_id: string;
+  image: string;
+  priceFrom?: number;
+  priceTo?: number;
+  fixedPrice?: number;
+  duration?: string;
 }

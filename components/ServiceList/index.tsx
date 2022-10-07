@@ -6,17 +6,18 @@ import useSWR from "swr";
 import { useServicesStore } from "../../state";
 import { ServiceT } from "../../types";
 import { fetcher, formatMoney } from "../../utils";
-import Loading from "../Loading";
 
 interface ServiceListProps {}
 
 const ServiceList: React.FC<ServiceListProps> = () => {
   const services = useServicesStore((state) => state.services);
+  const setServices = useServicesStore((state) => state.setServices);
   const { data, error } = useSWR<ServiceT[]>("/api/services", fetcher);
 
   React.useEffect(() => {
     if (data) {
       toast.dismiss();
+      setServices(data);
     }
     if (error) {
       toast.dismiss();
@@ -56,7 +57,7 @@ const ServiceList: React.FC<ServiceListProps> = () => {
                       : serv.priceFrom
                       ? `${formatMoney(
                           serv.priceFrom.toString()
-                        )} - ${formatMoney(serv.priceTo.toString())}`
+                        )} - ${formatMoney(serv.priceTo?.toString() as string)}`
                       : ""}
                   </td>
                   <td>{serv.status}</td>
