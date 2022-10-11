@@ -7,14 +7,14 @@ const Document = () => {
       <Head>
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-XYS74MFZ79"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZKNLHHRRQH"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script strategy="afterInteractive" id="google-analytics">
           {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-          gtag('config', 'G-XYS74MFZ79');
+            gtag('config', 'G-ZKNLHHRRQH');
           `}
         </Script>
         <link
