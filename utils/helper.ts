@@ -27,10 +27,7 @@ export const generateTimeSlots = (date: string) => {
     i = i.add(DURATION, "hours")
   ) {
     // Checks if the date is the current day.
-    if (
-      dayjs().isSame(dayjs(date), "day") ||
-      dayjs().isBefore(dayjs(date), "day")
-    ) {
+    if (dayjs().isSame(dayjs(date), "day")) {
       // Generate the time only when its still available,
       // if not, start from the next available hour
       if (dayjs().isBefore(i, "hour")) {

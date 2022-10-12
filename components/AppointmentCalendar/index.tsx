@@ -28,10 +28,10 @@ const AppointmentCalendar: React.FC<AppointmentCalendarProps> = ({
   );
 
   React.useEffect(() => {
-    getDayAppointments(dayjs().format("YYYY-MM-DD"));
+    handleDayClick(new Date());
   }, []);
 
-  const handleDayClick = async (value: Date, e: any) => {
+  const handleDayClick = async (value: Date, e?: any) => {
     setTimeSlots([]);
     onSelectSlot(undefined);
     const date = dayjs(value).format("YYYY-MM-DD");
