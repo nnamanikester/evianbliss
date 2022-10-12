@@ -84,29 +84,39 @@ const AppointmentCalendar: React.FC<AppointmentCalendarProps> = ({
         </div>
         <div className="col-5 slot-container">
           <div className="row">
-            {isLoading && <Loading size="medium" />}
+            {/* {isLoading && <Loading size="medium" />} */}
 
-            {timeSlots.map((slot) => (
-              <div
-                onClick={
-                  booked[slot.time] && booked[slot.time].length >= EMPLOYEES
-                    ? undefined
-                    : () => handleSelectTime(slot)
-                }
-                key={slot.time}
-                className={cx({
-                  slot: true,
-                  "slot--selected": _.isEqual(slot, timeSlot),
-                  "slot--disabled":
-                    booked[slot.time] && booked[slot.time].length >= EMPLOYEES,
-                  "slot--available":
-                    !booked[slot.time] ||
-                    (booked[slot.time] && booked[slot.time].length < EMPLOYEES),
-                })}
-              >
-                {slot.time}
+            {isLoading ? (
+              <Loading size="medium" />
+            ) : timeSlots.length > 0 ? (
+              timeSlots.map((slot) => (
+                <div
+                  onClick={
+                    booked[slot.time] && booked[slot.time].length >= EMPLOYEES
+                      ? undefined
+                      : () => handleSelectTime(slot)
+                  }
+                  key={slot.time}
+                  className={cx({
+                    slot: true,
+                    "slot--selected": _.isEqual(slot, timeSlot),
+                    "slot--disabled":
+                      booked[slot.time] &&
+                      booked[slot.time].length >= EMPLOYEES,
+                    "slot--available":
+                      !booked[slot.time] ||
+                      (booked[slot.time] &&
+                        booked[slot.time].length < EMPLOYEES),
+                  })}
+                >
+                  {slot.time}
+                </div>
+              ))
+            ) : (
+              <div>
+                <p className="text-primary">No time available</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
