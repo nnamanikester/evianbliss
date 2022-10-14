@@ -5,12 +5,13 @@ import Breadcrum from "../../../components/Breadcrum";
 import MetaTags from "../../../components/MetaTags";
 import Offer from "../../../components/Offer";
 import config from "../../../config";
+import { getService, getServices } from "../../../controllers";
+import { ServiceT } from "../../../types";
 import { formatMoney } from "../../../utils";
+import renderHTML from "react-render-html";
 
 interface ServicePageProps {
-  service: {
-    name: string;
-  };
+  service: ServiceT;
 }
 
 const ServicePage: NextPage<ServicePageProps> = ({ service }) => {
@@ -19,6 +20,7 @@ const ServicePage: NextPage<ServicePageProps> = ({ service }) => {
   return (
     <>
       <MetaTags
+        image={service.image || undefined}
         title={`${service.name ?? "Hair Styling"} Service`}
         url={`https://evianbliss.com/services/${query.serviceId}`}
         description={`${service.name} - All you need to know about ${service.name}. Description, requirements, pricing. Love your hair, Love the texture!`}
@@ -52,54 +54,33 @@ const ServicePage: NextPage<ServicePageProps> = ({ service }) => {
                 {config.SHORT_NAME} {service.name}
               </h3>
               <br />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Quidem, expedita voluptatum? Quam quos similique reprehenderit
-                placeat ad! Harum, animi reiciendis dolores, accusantium
-                laboriosam, culpa eum ad quod minus veniam est!
-              </p>
-              <br />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Quidem, expedita voluptatum? Quam quos similique reprehenderit
-                placeat ad! Harum, animi reiciendis dolores, accusantium
-                laboriosam, culpa eum ad quod minus veniam est! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Labore sit aliquam
-                rem facilis suscipit enim accusantium maxime architecto
-                dignissimos. Maiores, pariatur. Illo atque dolore quidem quis
-                corporis consectetur! Consequatur, rem?
-              </p>
-              <br />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Quidem, expedita voluptatum? Quam quos similique reprehenderit
-                placeat ad! Harum, animi reiciendis dolores, accusantium
-                laboriosam, culpa eum ad quod minus veniam est! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Labore sit aliquam
-                rem facilis suscipit enim accusantium maxime architecto
-                dignissimos. Maiores, pariatur. Illo atque dolore quidem quis
-                corporis consectetur! Consequatur, rem?
-              </p>
+              {renderHTML(service.description)}
             </div>
             <div className="col-3 offer-box">
               <div className="service-details col-6">
                 <div className="service-image">
-                  <Image
-                    placeholder="blur"
-                    blurDataURL={config.BLUR_URL}
-                    alt={`Evian Bliss Hair Spa in Enugu - ${service.name}`}
-                    src={require("/public/images/evian-bliss-hair-model-2.jpg")}
-                  />
+                  {service.image && (
+                    <Image
+                      placeholder="blur"
+                      blurDataURL={config.BLUR_URL}
+                      alt={`Evian Bliss Hair Spa in Enugu - ${service.name}`}
+                      src={service.image}
+                    />
+                  )}
                 </div>
                 <p className="service-price">
                   <span className="text-primary bold"> Price: </span>
-                  <span className="bold">{`${formatMoney(
-                    "1000"
-                  )} – ${formatMoney("15000")}`}</span>
+                  <span className="bold">
+                    {service.fixedPrice
+                      ? formatMoney(service.fixedPrice.toString())
+                      : `${formatMoney(`${service.priceFrom}`)} – ${formatMoney(
+                          `${service.priceTo}`
+                        )}`}
+                  </span>
                 </p>
                 <p className="service-duration">
                   <span className="text-primary bold"> Duration: </span>{" "}
-                  <span className="bold">3 hrs 45 mins</span>
+                  <span className="bold">{service.duration}</span>
                 </p>
               </div>
               <Offer />
@@ -111,35 +92,33 @@ const ServicePage: NextPage<ServicePageProps> = ({ service }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<ServicePageProps> = async () => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const serviceId = context.params?.serviceId;
+  const service = await getService({ slug: serviceId as string });
+  console.log(service);
+
   return {
     props: {
-      service: {
-        name: "Hair Styling Braids",
-      },
+      service: JSON.parse(JSON.stringify(service)),
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  let services: ServiceT[] = [];
+
+  try {
+    services = await getServices();
+  } catch (e: any) {
+    console.log(e.message);
+  }
+
   return {
-    paths: [
-      {
-        params: {
-          serviceId: "service-title",
-        },
+    paths: services.map((serv) => ({
+      params: {
+        serviceId: serv.slug,
       },
-      {
-        params: {
-          serviceId: "service-title-1",
-        },
-      },
-      {
-        params: {
-          serviceId: "service-title-2",
-        },
-      },
-    ],
+    })),
     fallback: false,
   };
 };

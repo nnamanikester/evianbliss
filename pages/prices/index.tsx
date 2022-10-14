@@ -6,6 +6,8 @@ import cx from "classnames";
 import Offer from "../../components/Offer";
 import { formatMoney } from "../../utils";
 import config from "../../config";
+import { ServiceCategoryT } from "../../types";
+import { useServiceCategoriesStore } from "../../state";
 
 interface ServiceT {
   id: string;
@@ -23,141 +25,26 @@ interface CategoryT {
 }
 
 const PricesPage: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState<CategoryT>();
+  const [selectedCategory, setSelectedCategory] =
+    React.useState<ServiceCategoryT>();
+  const [categories, setCategories] = React.useState<ServiceCategoryT[]>([]);
 
-  const services: CategoryT[] = React.useMemo(
-    () => [
-      {
-        id: "braids-category",
-        category: "Braids",
-        services: [
-          {
-            id: "ghana-baids-service",
-            name: "Ghana Braids",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-          {
-            id: "ghana-baids-service-2",
-            name: "Ghana Braids 2",
-            fixedPrice: 3500,
-            duration: "3 hours 30 mins",
-          },
-          {
-            id: "ghana-baids-service-3",
-            name: "Ghana Braids 3",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-          {
-            id: "ghana-baids-service-4",
-            name: "Ghana Braids 4",
-            fixedPrice: 3500,
-            duration: "3 hours 30 mins",
-          },
-        ],
-      },
-      {
-        id: "twists-category",
-        category: "Twists & Bantu",
-        services: [
-          {
-            id: "twists-service",
-            name: "Natural Hair Twist",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-          {
-            id: "twist-service-2",
-            name: "Natural Hair Twist 2",
-            fixedPrice: 3500,
-            duration: "3 hours 30 mins",
-          },
-          {
-            id: "twist-service-3",
-            name: "Natural Hair Twist 3",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-        ],
-      },
-      {
-        id: "bridal-hair-category",
-        category: "Bridal Hair Service",
-        services: [
-          {
-            id: "bridal-hair-service",
-            name: "Igba Nkwu",
-            fixedPrice: 3500,
-            duration: "3 hours 30 mins",
-          },
-          {
-            id: "bridal-hair-service-1",
-            name: "Igba Nkwu 1",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-          {
-            id: "bridal-hair-service-2",
-            name: "Igba Nkwu 2",
-            fixedPrice: 3500,
-            duration: "3 hours 30 mins",
-          },
-          {
-            id: "bridal-hair-service-3",
-            name: "Igba Nkwu 3",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-          {
-            id: "bridal-hair-service-4",
-            name: "Igba Nkwu 4",
-            fixedPrice: 3500,
-            duration: "3 hours 30 mins",
-          },
-        ],
-      },
-      {
-        id: "gelup-category",
-        category: "Gelup/Ponytail",
-        services: [
-          {
-            id: "gelup-service",
-            name: "Natural Hair Gelup",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-          {
-            id: "gelup-service-2",
-            name: "Natural Hair Gelup 2",
-            fixedPrice: 3500,
-            duration: "3 hours 30 mins",
-          },
-        ],
-      },
-      {
-        id: "home-service-category",
-        category: "Home Service",
-        services: [
-          {
-            id: "home-service",
-            name: "Home Service",
-            priceFrom: 2000,
-            priceTo: 15000,
-          },
-        ],
-      },
-    ],
-    []
-  );
+  const cats = useServiceCategoriesStore((state) => state.categories);
 
   React.useEffect(() => {
-    if (services) {
-      handleSelectedCategory(services[0]);
-    }
-  }, [services]);
+    const filtered = cats.filter(
+      (cat) => cat.services && cat.services.length > 0
+    );
+    setCategories(filtered);
+  }, [cats]);
 
-  const handleSelectedCategory = (category: CategoryT) => {
+  React.useEffect(() => {
+    if (categories.length > 0) {
+      handleSelectedCategory(categories[0]);
+    }
+  }, [categories]);
+
+  const handleSelectedCategory = (category: ServiceCategoryT) => {
     setSelectedCategory(
       category.id === selectedCategory?.id ? undefined : category
     );
@@ -188,7 +75,7 @@ const PricesPage: NextPage = () => {
             <div className="col-8">
               <div className="accordion col-12">
                 <ul className="accordion__list">
-                  {services.map((item) => (
+                  {categories.map((item) => (
                     <li
                       key={item.id}
                       className={cx({
@@ -198,7 +85,7 @@ const PricesPage: NextPage = () => {
                       })}
                     >
                       <a onClick={() => handleSelectedCategory(item)}>
-                        <span>{item.category}</span>
+                        <span>{item.name}</span>
                         <span
                           className={cx({
                             icon: true,
@@ -211,7 +98,7 @@ const PricesPage: NextPage = () => {
                       </a>
 
                       <ul className="accordion__content">
-                        {item.services.map((service) => (
+                        {item.services?.map((service) => (
                           <li
                             key={service.id}
                             className={cx({

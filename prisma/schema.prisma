@@ -35,7 +35,7 @@ model Category {
 model Service {
   id String @id @default(auto())  @map("_id") @db.ObjectId
   name String
-  slug String
+  slug String @unique
   description String @db.String
   category_id String?
   image String?
@@ -143,6 +143,14 @@ model VerificationToken {
 
   @@unique([identifier, token])
   @@map("verificationtokens")
+}
+
+model Gallery {
+  id String @id @default(auto())  @map("_id") @db.ObjectId
+  image String
+  caption String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }
 
 enum Role {

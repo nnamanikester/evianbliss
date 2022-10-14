@@ -16,10 +16,20 @@ const Header: React.FC<HeaderProps> = () => {
     fetcher
   );
 
-  const setCategories = useServiceCategoriesStore(
+  const setFetchedCategories = useServiceCategoriesStore(
     (state) => state.setCategories
   );
-  const categories = useServiceCategoriesStore((state) => state.categories);
+
+  const [categories, setCategories] = React.useState<ServiceCategoryT[]>([]);
+
+  const cats = useServiceCategoriesStore((state) => state.categories);
+
+  React.useEffect(() => {
+    const filtered = cats.filter(
+      (cat) => cat.services && cat.services.length > 0
+    );
+    setCategories(filtered);
+  }, [cats]);
 
   const [windowSize, setWindowSize] = React.useState({
     width: 800,
@@ -37,7 +47,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   React.useEffect(() => {
     if (fetchedCategories) {
-      setCategories(fetchedCategories);
+      setFetchedCategories(fetchedCategories);
     }
   }, [fetchedCategories]);
 
@@ -180,286 +190,24 @@ const Header: React.FC<HeaderProps> = () => {
                   })}
                 >
                   <div className={"dropdown-container"}>
-                    <div className="category-list">
-                      <h5>Braids</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="category-list">
-                      <h5>Bridal Hair Service</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="category-list">
-                      <h5>Cornrow</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="category-list">
-                      <h5>Twists & Bantu</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="category-list">
-                      <h5>Braids</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="category-list">
-                      <h5>Bridal Hair Service</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="category-list">
-                      <h5>Cornrow</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="category-list">
-                      <h5>Twists & Bantu</h5>
-                      <ul>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <a href="#">
-                            Hair Dressing Bottox Hair Dressing Bottox
-                          </a>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Hair Dressing Bottox</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`/services/service-title`}>
-                            <a onClick={closeMenu}>Braiding</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
+                    {categories &&
+                      categories.map((cat) => (
+                        <div className="category-list" key={cat.id}>
+                          <h5>{cat.name}</h5>
+                          <ul>
+                            {cat.services &&
+                              cat.services.map((serv) => (
+                                <li key={serv.id}>
+                                  <Link href={`/services/${serv.slug}`}>
+                                    <a onClick={() => setShowServices(false)}>
+                                      {serv.name}
+                                    </a>
+                                  </Link>
+                                </li>
+                              ))}
+                          </ul>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </li>

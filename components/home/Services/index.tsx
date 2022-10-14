@@ -4,15 +4,10 @@ import cx from "classnames";
 import renderHTML from "react-render-html";
 import config from "../../../config";
 import Link from "next/link";
+import { useServiceCategoriesStore } from "../../../state";
+import { ServiceCategoryT, ServiceT } from "../../../types";
 
 interface ServicesProps {}
-
-interface ServiceT {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-}
 
 interface CategoryT {
   id: string;
@@ -21,183 +16,42 @@ interface CategoryT {
 }
 
 export const Services: React.FC<ServicesProps> = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState<CategoryT>();
+  const [selectedCategory, setSelectedCategory] =
+    React.useState<ServiceCategoryT>();
   const [selectedService, setSelectedService] = React.useState<ServiceT>();
   const [selectedServiceImage, setSelectedServiceImage] =
     React.useState<string>();
+  const [categories, setCategories] = React.useState<ServiceCategoryT[]>([]);
 
-  const services: CategoryT[] = React.useMemo(
-    () => [
-      {
-        id: "braids-category",
-        category: "Braids",
-        services: [
-          {
-            id: "ghana-baids-service",
-            name: "Ghana Braids",
-            description:
-              "<p class='mb-1'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-          },
-          {
-            id: "ghana-baids-service-2",
-            name: "Ghana Braids 2",
-            description:
-              "<p class='mb-1'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          },
-          {
-            id: "ghana-baids-service-3",
-            name: "Ghana Braids 3",
-            description:
-              "<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1548207800-8c16d068bf17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          },
-          {
-            id: "ghana-baids-service-4",
-            name: "Ghana Braids 4",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p>",
-            image:
-              "https://images.unsplash.com/photo-1552425883-1fd7e6a11c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          },
-        ],
-      },
-      {
-        id: "twists-category",
-        category: "Twists & Bantu",
-        services: [
-          {
-            id: "twists-service",
-            name: "Natural Hair Twist",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-          },
-          {
-            id: "twist-service-2",
-            name: "Natural Hair Twist 2",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          },
-          {
-            id: "twist-service-3",
-            name: "Natural Hair Twist 3",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1548207800-8c16d068bf17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          },
-        ],
-      },
-      {
-        id: "bridal-hair-category",
-        category: "Bridal Hair Service",
-        services: [
-          {
-            id: "bridal-hair-service",
-            name: "Igba Nkwu",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-          },
-          {
-            id: "bridal-hair-service-1",
-            name: "Igba Nkwu 1",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          },
-          {
-            id: "bridal-hair-service-2",
-            name: "Igba Nkwu 2",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1548207800-8c16d068bf17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          },
-          {
-            id: "bridal-hair-service-3",
-            name: "Igba Nkwu 3",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1552425883-1fd7e6a11c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          },
-          {
-            id: "bridal-hair-service-4",
-            name: "Igba Nkwu 4",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1583724711595-ed09eedf1ff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-          },
-        ],
-      },
-      {
-        id: "gelup-category",
-        category: "Gelup/Ponytail",
-        services: [
-          {
-            id: "gelup-service",
-            name: "Natural Hair Gelup",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-          },
-          {
-            id: "gelup-service-2",
-            name: "Natural Hair Gelup 2",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1565357419076-6acd4a10094e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          },
-        ],
-      },
-      {
-        id: "home-service-category",
-        category: "Home Service",
-        services: [
-          {
-            id: "home-service",
-            name: "Home Service",
-            description:
-              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, libero cupiditate aperiam vel quia suscipit officia aliquid laboriosam nesciunt, vitae hic alias, temporibus eligendi unde. Quo nobis magni cumque delectus?</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita perspiciatis iste nesciunt, eveniet debitis, aliquid ipsum enim quae ad blanditiis repudiandae commodi id dolores quaerat nobis vero architecto accusamus.</p>",
-            image:
-              "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-          },
-        ],
-      },
-    ],
-    []
-  );
+  const cats = useServiceCategoriesStore((state) => state.categories);
 
   React.useEffect(() => {
-    if (services) {
-      handleSelectedCategory(services[0]);
+    const filtered = cats.filter(
+      (cat) => cat.services && cat.services.length > 0
+    );
+    setCategories(filtered);
+  }, [cats]);
+
+  React.useEffect(() => {
+    if (categories.length > 0) {
+      handleSelectedCategory(categories[0]);
     }
-  }, [services]);
+  }, [categories]);
 
   const handleSelectedService = (service: ServiceT) => {
     setSelectedService(service);
-    setSelectedServiceImage(service.image);
+    if (service) {
+      setSelectedServiceImage(service.image as string);
+    }
   };
 
-  const handleSelectedCategory = (category: CategoryT) => {
+  const handleSelectedCategory = (category: ServiceCategoryT) => {
     setSelectedCategory(
       category.id === selectedCategory?.id ? undefined : category
     );
-    handleSelectedService(category.services[0]);
+    if (category.services) {
+      handleSelectedService(category.services[0]);
+    }
   };
 
   return (
@@ -215,7 +69,7 @@ export const Services: React.FC<ServicesProps> = () => {
           <div className="row">
             <div className="accordion col-3 pr-4">
               <ul className="accordion__list">
-                {services.map((item) => (
+                {categories.map((item) => (
                   <li
                     key={item.id}
                     className={cx({
@@ -224,7 +78,7 @@ export const Services: React.FC<ServicesProps> = () => {
                     })}
                   >
                     <a onClick={() => handleSelectedCategory(item)}>
-                      <span>{item.category}</span>
+                      <span>{item.name}</span>
                       <span
                         className={cx({
                           icon: true,
@@ -236,7 +90,7 @@ export const Services: React.FC<ServicesProps> = () => {
                     </a>
 
                     <ul className="accordion__content">
-                      {item.services.map((service) => (
+                      {item.services?.map((service) => (
                         <li
                           key={service.id}
                           className={cx({
@@ -257,7 +111,7 @@ export const Services: React.FC<ServicesProps> = () => {
             </div>
 
             <div className="col-9 pl-4 service">
-              <h5>{selectedCategory?.category}</h5>
+              <h5>{selectedCategory?.name}</h5>
               <div className="row">
                 <div className="col-8">
                   <h5 className="mb-2 bold text-dark">

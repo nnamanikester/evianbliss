@@ -3,7 +3,6 @@ import * as React from "react";
 import { Swiper } from "swiper/react";
 import config from "../../../config";
 import Carousel from "../../Carousel";
-import SliderNavigation from "../../SliderNavigation";
 
 interface PhotoGalleryProps {}
 
@@ -52,7 +51,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = () => {
             <li ref={itemRef}>
               <Image
                 placeholder="blur"
-                src={require("/public/images/joyful-african.jpg")}
+                src={require("/public/images/bantu-nuts.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 blurDataURL={config.BLUR_URL}
                 style={{ width: "auto", height: "auto" }}
@@ -88,7 +87,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = () => {
             <li ref={itemRef}>
               <Image
                 placeholder="blur"
-                src={require("/public/images/evian-bliss-hair-model-2.jpg")}
+                src={require("/public/images/bantu-nuts-2.jpg")}
                 alt="Evian Bliss Hair Spa Image Gallery"
                 blurDataURL={config.BLUR_URL}
                 style={{ width: "auto", height: "auto" }}

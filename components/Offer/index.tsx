@@ -14,7 +14,7 @@ const Offer: React.FC<OfferProps> = () => {
             placeholder="blur"
             blurDataURL={config.BLUR_URL}
             alt="Google Logo"
-            src={require("/public/images/jessica-felicio-braids.jpg")}
+            src={require("/public/images/corn-row.jpg")}
             className="offer-image"
           />
         </div>
