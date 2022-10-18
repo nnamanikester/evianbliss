@@ -33,7 +33,7 @@ const HomePage: NextPage = () => {
 
         <Reviews />
 
-        <Article />
+        {/* <Article /> */}
 
         <PhotoGallery />
 
