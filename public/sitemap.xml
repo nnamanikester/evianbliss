@@ -13,7 +13,47 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.evianbliss.com/about</loc>
+  <loc>https://www.evianbliss.com/book-appointment</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/prices</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/services/detangling-of-hair</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/services/loosening-of-hair</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/services/washing-of-hair</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/services/moisture-treatment</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/services/protein-deep-treatments</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/services/clay-mask-(scalp-detox)</loc>
+  <lastmod>2022-09-17T10:08:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.evianbliss.com/services/lice-treatment</loc>
   <lastmod>2022-09-17T10:08:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
