@@ -25,6 +25,10 @@ const Document = () => {
           href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
           rel="stylesheet"
         />
+        <meta
+          name="google-site-verification"
+          content="SA6Ez70niDxDafYIvMye4Bfsa6KFK1m3dFrB4Bj_m8o"
+        />
       </Head>
       <body>
         <Main />
