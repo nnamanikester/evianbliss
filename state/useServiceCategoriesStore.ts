@@ -13,7 +13,10 @@ export const useServiceCategoriesStore = create<ServiceCategoriesStore>(
   (set, get) => ({
     categories: [],
     setCategories: (categories) => {
-      set({ categories });
+      const sorted = categories.sort((a, b) =>
+        a.created_at < b.created_at ? 1 : -1
+      );
+      set({ categories: sorted });
     },
     removeCategory: (id) => {
       const categories = get().categories;
